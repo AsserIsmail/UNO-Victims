@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.awt.*;
 import java.util.Arrays;
 import java.util.List;
@@ -32,6 +33,7 @@ public class Card {
 
         this.colour = col;
         this.symbol = symbol;
+        this.back = new ImageIcon("card_back.png").getImage();
 
         if (!(col.equals("black"))){
 
