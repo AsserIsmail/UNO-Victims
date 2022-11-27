@@ -1,3 +1,5 @@
+package base;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.Arrays;
@@ -27,7 +29,7 @@ public class Card {
     public static final List<String> wilds = Arrays.asList("color_changer", "pick_four"); // all the possible wild cards
 
 /*
- * Card constructor.
+ * base.Card constructor.
  */
     public Card(String col, String symbol){
 
