@@ -70,5 +70,17 @@ public class Card {
     public int getPoint(){return this.point;}
 
 
+    @Override
+    public boolean equals(Object o) {
 
+        if (this == o){
+            return true;
+        } else if (!(o instanceof Card)) {
+            return false;
+        } else {
+
+            return ((Card) o).colour.equals(this.colour) && ((Card) o).symbol.equals(this.symbol);
+
+        }
+    }
 }
