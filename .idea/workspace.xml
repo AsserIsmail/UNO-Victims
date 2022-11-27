@@ -1,7 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4bb8febd-416a-4bb3-a2a3-dd30f48250b7" name="Changes" comment="" />
+    <list default="true" id="4bb8febd-416a-4bb3-a2a3-dd30f48250b7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/blue_0_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/blue_1_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/blue_2_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/blue_3_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/blue_4_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/blue_5_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/blue_6_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/blue_7_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/blue_8_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/blue_9_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/blue_picker_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/blue_reverse_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/blue_skip_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/card_back_alt_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/card_back_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/green_0_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/green_1_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/green_2_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/green_3_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/green_4_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/green_5_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/green_6_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/green_7_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/green_8_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/green_9_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/green_picker_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/green_reverse_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/green_skip_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/red_0_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/red_1_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/red_2_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/red_3_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/red_4_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/red_5_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/red_6_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/red_7_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/red_8_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/red_9_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/red_picker_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/red_reverse_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/red_skip_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/wild_colora_changer_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/wild_pick_four_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/yellow_0_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/yellow_1_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/yellow_2_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/yellow_3_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/yellow_4_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/yellow_5_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/yellow_6_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/yellow_7_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/yellow_8_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/yellow_9_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/yellow_picker_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/yellow_reverse_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/yellow_skip_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/blue_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/blue_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/blue_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/blue_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/blue_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/blue_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/blue_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/blue_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/blue_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/blue_9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/blue_picker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/blue_reverse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/blue_skip.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/card_back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/card_back_alt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/green_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/green_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/green_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/green_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/green_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/green_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/green_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/green_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/green_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/green_9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/green_picker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/green_reverse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/green_skip.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/red_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/red_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/red_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/red_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/red_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/red_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/red_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/red_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/red_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/red_9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/red_picker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/red_reverse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/red_skip.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/wild_color_changer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/wild_pick_four.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/yellow_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/yellow_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/yellow_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/yellow_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/yellow_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/yellow_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/yellow_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/yellow_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/yellow_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/yellow_9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/yellow_picker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/yellow_reverse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/yellow_skip.png" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,18 +141,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
