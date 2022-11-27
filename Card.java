@@ -20,11 +20,11 @@ public class Card {
 
     private Image back; // an image of the back of the card
 
-    public static final List<String> colours = Arrays.asList("blue", "green", "yellow", "red", "black"); // all the possible colours of a card
+    public static final List<String> colours = Arrays.asList("blue", "green", "yellow", "red", "wild"); // all the possible colours of a card
 
-    public static final List<String> symbols = Arrays.asList("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "+2", "skip", "rev"); // all the possible symbols
+    public static final List<String> symbols = Arrays.asList("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "picker", "skip", "reverse"); // all the possible symbols
 
-    public static final List<String> wilds = Arrays.asList("wild_colour", "+4"); // all the possible wild cards
+    public static final List<String> wilds = Arrays.asList("color_changer", "pick_four"); // all the possible wild cards
 
 /*
  * Card constructor.
@@ -33,9 +33,8 @@ public class Card {
 
         this.colour = col;
         this.symbol = symbol;
-        this.back = new ImageIcon("card_back.png").getImage();
 
-        if (!(col.equals("black"))){
+        if (!(col.equals("wild"))){
 
             if (this.symbols.subList(0, 10).contains(symbol)) {
                 this.point = 10;
@@ -48,7 +47,27 @@ public class Card {
             this.point = 50;
         }
 
+        this.back = new ImageIcon("card_back.png").getImage();
+        String image = col + "_" + symbol + ".png";
+        this.front = new ImageIcon(image).getImage();
+
     }
+
+
+    /*
+    Getter for the colour
+     */
+    public String getColour(){return this.colour;}
+
+    /*
+    Getter for the symbol
+     */
+    public String getSymbol(){return this.symbol;}
+
+    /*
+    Getter for card's point value
+     */
+    public int getPoint(){return this.point;}
 
 
 
