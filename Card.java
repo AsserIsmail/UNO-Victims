@@ -78,9 +78,7 @@ public class Card {
         } else if (!(o instanceof Card)) {
             return false;
         } else {
-
             return ((Card) o).colour.equals(this.colour) && ((Card) o).symbol.equals(this.symbol);
-
         }
     }
 }
