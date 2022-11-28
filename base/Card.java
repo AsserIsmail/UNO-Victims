@@ -22,6 +22,10 @@ public class Card {
 
     private Image back; // an image of the back of the card
 
+    private String front_src; // stores the source of the front image
+
+    private String back_src; // stores the source of the back image
+
     public static final List<String> colours = Arrays.asList("blue", "green", "yellow", "red", "wild"); // all the possible colours of a card
 
     public static final List<String> symbols = Arrays.asList("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "picker", "skip", "reverse"); // all the possible symbols
@@ -50,8 +54,10 @@ public class Card {
         }
 
         this.back = new ImageIcon("card_back.png").getImage();
+        this.back_src = "card_back.png";
         String image = col + "_" + symbol + ".png";
         this.front = new ImageIcon(image).getImage();
+        this.front_src = image;
 
     }
 
@@ -71,6 +77,26 @@ public class Card {
      */
     public int getPoint(){return this.point;}
 
+    /*
+    Getter method for back image
+     */
+    public String getBack() {
+        return this.back_src;
+    }
+
+    /*
+    Getter function for the front image
+     */
+    public String getFront() {
+        return this.front_src;
+    }
+
+    /*
+    Checks if a card is playable based on the colour and the symbol of the given card.
+     */
+    public boolean isPlayable(Card c){
+        return this.symbol.equals(c.getSymbol()) || this.colour.equals(c.getColour());
+    }
 
     @Override
     public boolean equals(Object o) {

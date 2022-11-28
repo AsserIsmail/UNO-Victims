@@ -78,7 +78,7 @@ public class Player {
     // current card in play
     public void setAvailableCards(Card currentCard){
         for(Card c:hand){
-            if(c.equals(currentCard) /* || c.coulour.equals(board.currColour))*/) this.availableCards.add(c);
+            if(c.isPlayable(currentCard) /* || c.coulour.equals(board.currColour))*/) this.availableCards.add(c);
         }
     }
 
