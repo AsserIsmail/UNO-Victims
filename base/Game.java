@@ -38,21 +38,25 @@ public class Game {
 
         if (c.getSymbol().equals("picker")) {
             // Go to the next player, draw to cards, go to the next player again.
+            this.board.getCurrentPlayer().giveScore(c.getPoint());
             this.board.goToNextPlayer();
             this.board.getCurrentPlayer().draw(this.board.getDrawDeck());
             this.board.getCurrentPlayer().draw(this.board.getDrawDeck());
             this.board.goToNextPlayer();
         } else if (c.getSymbol().equals("skip")) {
             // Skip the first player
+            this.board.getCurrentPlayer().giveScore(c.getPoint());
             this.board.goToNextPlayer();
             this.board.goToNextPlayer();
         } else if (c.getSymbol().equals("reverse")) {
             // Change the direction in board and goes to the next player
+            this.board.getCurrentPlayer().giveScore(c.getPoint());
             if (this.board.getDirection() == 1) this.board.setDirection(-1);
             else this.board.setDirection(1);
             this.board.goToNextPlayer();
         } else if (c.getSymbol().equals("color_changer")) {
             // Print options
+            this.board.getCurrentPlayer().giveScore(c.getPoint());
             System.out.println("Enter colour number:");
             System.out.println("Blue -> 1");
             System.out.println("Red -> 2");
@@ -73,6 +77,7 @@ public class Game {
 
         } else if (c.getSymbol().equals("pick_four")) {
             // Print options
+            this.board.getCurrentPlayer().giveScore(c.getPoint());
             System.out.println("Enter colour number:");
             System.out.println("Blue -> 1");
             System.out.println("Red -> 2");
@@ -97,9 +102,10 @@ public class Game {
             this.board.getCurrentPlayer().draw(this.board.getDrawDeck());
             this.board.getCurrentPlayer().draw(this.board.getDrawDeck());
 
+        } else {
+            this.board.getCurrentPlayer().giveScore(c.getPoint());
+            this.board.goToNextPlayer();
         }
-
-
     }
 
     /*
@@ -110,24 +116,25 @@ public class Game {
     }
 
     /*
-    When a player passes their turn
-     */
-    public void pass(){
-        this.board.goToNextPlayer();
-    }
-
-    /*
     Starts the game
      */
     public void startGame(){
-        //idk what is going on here
+        this.gameOn = true;
+        this.play();
+    }
+
+    /*
+    Play the game. Where the game actually happens
+     */
+    public void play(){
+
     }
 
     /*
     Ends the game
      */
     public void endGame(){
-        //idk what is going on here
+        this.gameOn = false;
     }
 
 }

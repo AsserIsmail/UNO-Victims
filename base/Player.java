@@ -28,6 +28,7 @@ public class Player {
     public Player(String playerName, String cB){
         this.name = playerName;
         this.colourBlind = cB;
+        this.score = 0;
     }
 
     // adds the topmost card from the deck to the players hand
@@ -85,6 +86,13 @@ public class Player {
     // returns availableCards
     public ArrayList<Card> getACards(){
         return this.availableCards;
+    }
+
+    /*
+    Adds score to the player
+     */
+    public void giveScore(int s) {
+        this.score += s;
     }
 }
 
