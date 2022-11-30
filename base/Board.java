@@ -23,6 +23,8 @@ public class Board {
 
     private Player currentPlayer; // the current player
 
+    private String currentCol; // Current colour on the board
+
     private int direction; // the direction of play (1 for clockwise, -1 for counterclockwise)
 
     private int turn; // the number of turns that have been played
@@ -47,7 +49,7 @@ public class Board {
         this.timeLimit = new Timer();
         this.isUno = false;
         this.drawDeck = new Stack<>();
-
+        this.currentCol = null;
         this.table = new DCL(this.numPlayers, allPlayers); // the turn object on the board
         this.currentPlayer = this.table.giveCurr();
 
@@ -79,12 +81,21 @@ public class Board {
     }
 
     /**
-     * Returns the next player and changes the current player to the next player.
+     * Returns the next player.
      * @return  the next player
      */
     public Player getNextPlayer() {
-        return this.table.giveNext(this.direction);
+        return this.table.getNext(this.direction);
     }
+
+
+    /**
+     * Changes the current player to the next player
+     */
+    public void goToNextPlayer() {
+        this.table.goToNext(this.direction);
+    }
+
 
     /**
      * Returns the current player's index.
@@ -163,6 +174,13 @@ public class Board {
     }
 
     /**
+     * Sets the direction of the game.
+     */
+    public void setDirection(int r) {
+        this.direction = r;
+    }
+
+    /**
      * Returns the number of turns that have been played.
      * @return  the number of turns that have been played
      */
@@ -187,5 +205,11 @@ public class Board {
         return this.timeLimit;
     }
 
+    /*
+    Change the current colour
+     */
+    public void setCurrCol(String colour){
+        this.currentCol = colour;
+    }
 
 }
