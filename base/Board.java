@@ -1,5 +1,7 @@
 package base;
 
+import base.DCLL.DCL;
+
 import java.util.Collections;
 import java.util.Stack;
 import java.util.Timer;
@@ -16,6 +18,8 @@ public class Board {
     private Card playedCard; // the card that is currently on the board
 
     private Player[] players; // the players in the game
+
+    private DCL table; // keeps track of the order of the game and players' turn direction
 
     private Player currentPlayer; // the current player
 
@@ -37,13 +41,16 @@ public class Board {
     public Board(Player[] allPlayers) {
         this.numPlayers = allPlayers.length;
         this.players = allPlayers;
-        this.currentPlayer = this.players[0];
         this.discardDeck = new Stack<>();
         this.direction = 1;
         this.turn = 0;
         this.timeLimit = new Timer();
         this.isUno = false;
         this.drawDeck = new Stack<>();
+
+        this.table = new DCL(this.numPlayers, allPlayers); // the turn object on the board
+        this.currentPlayer = this.table.giveCurr();
+
         for (String colour : Card.colours) {
             if (colour.equals("wild")) {
                 for (String symbol : Card.wilds) {
@@ -68,7 +75,15 @@ public class Board {
      * @return  the current player
      */
     public Player getCurrentPlayer() {
-        return this.currentPlayer;
+        return this.table.giveCurr();
+    }
+
+    /**
+     * Returns the next player and changes the current player to the next player.
+     * @return  the next player
+     */
+    public Player getNextPlayer() {
+        return this.table.giveNext(this.direction);
     }
 
     /**
@@ -169,14 +184,6 @@ public class Board {
      */
     public boolean getIsUno() {
         return this.isUno;
-    }
-
-    /**
-     * Sets the current player.
-     * @param player    the player to set as the current player
-     */
-    public void setCurrentPlayer(Player player) {
-        this.currentPlayer = player;
     }
 
 
