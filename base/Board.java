@@ -170,20 +170,21 @@ public class Board {
         return this.turn;
     }
 
+
+    /**
+     * Increments the round.
+     */
+    public void addTurn() {
+        this.turn++;
+    }
+
+
     /**
      * Returns the time limit for the players to play their turn.
      * @return  the time limit for the players to play their turn
      */
     public Timer getTimeLimit() {
         return this.timeLimit;
-    }
-
-    /**
-     * Returns if the current player has said uno.
-     * @return  if the current player has said uno
-     */
-    public boolean getIsUno() {
-        return this.isUno;
     }
 
 
