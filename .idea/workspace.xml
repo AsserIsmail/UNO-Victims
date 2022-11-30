@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4bb8febd-416a-4bb3-a2a3-dd30f48250b7" name="Changes" comment="Card class outline">
-      <change afterPath="$PROJECT_DIR$/base/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base/DCLL/DCL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base/DCLL/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/Board.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +81,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="dev-uno" />
+                        <option value="dev-uno-DCLL" />
                       </list>
                     </value>
                   </entry>
