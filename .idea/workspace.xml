@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4bb8febd-416a-4bb3-a2a3-dd30f48250b7" name="Changes" comment="Card class outline">
-      <change afterPath="$PROJECT_DIR$/base/Player.java" afterDir="false" />
+    <list default="true" id="4bb8febd-416a-4bb3-a2a3-dd30f48250b7" name="Changes" comment="Card class comments pt.1">
+      <change afterPath="$PROJECT_DIR$/base/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO-Victims/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO-Victims/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO-Victims/Game.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO-Victims/Tests/CardTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO-Victims/Tests/CardTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO-Victims/base/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO-Victims/base/Board.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev-uno" />
+        <entry key="$PROJECT_DIR$" value="dev-uno-Game" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,15 +45,93 @@
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
+  <component name="RunManager" selected="JUnit.CardTests">
+    <configuration name="CardTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UNO-Victims" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.CardTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardTests.CardEqualsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UNO-Victims" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.CardTests" />
+      <option name="METHOD_NAME" value="CardEqualsTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardTests.CardImageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UNO-Victims" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.CardTests" />
+      <option name="METHOD_NAME" value="CardImageTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardTests.CardIsPlayable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UNO-Victims" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.CardTests" />
+      <option name="METHOD_NAME" value="CardIsPlayable" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CardTests" />
+        <item itemvalue="JUnit.CardTests.CardIsPlayable" />
+        <item itemvalue="JUnit.CardTests.CardImageTest" />
+        <item itemvalue="JUnit.CardTests.CardEqualsTest" />
+        <item itemvalue="JUnit.CardTests.CardIsPlayable" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
