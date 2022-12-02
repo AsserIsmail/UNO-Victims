@@ -1,10 +1,7 @@
 package Tests;
 
-import base.Card;
-import org.junit.jupiter.api.Assertions;
+import base.Cards.Card;
 import org.junit.jupiter.api.Test;
-
-import javax.swing.plaf.basic.BasicTreeUI;
 
 import static org.junit.jupiter.api.Assertions.*;
 

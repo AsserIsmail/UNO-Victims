@@ -1,4 +1,4 @@
-package base;
+package base.Cards;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * A class representing an UNO card.
  */
-public class Card {
+public class Card implements AbstractCard{
 
     private String colour; // colour of the card
 
@@ -33,7 +33,7 @@ public class Card {
     public static final List<String> wilds = Arrays.asList("color_changer", "pick_four"); // all the possible wild cards
 
 /*
- * base.Card constructor.
+ * base.Cards.Card constructor.
  */
     public Card(String col, String symbol){
 
