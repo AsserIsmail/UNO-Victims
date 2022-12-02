@@ -125,7 +125,7 @@ public class Game {
             for(int i = 0;i<7;i++){
                 p.draw(board.getDrawDeck());
             }
-        this.play();
+        // this.play();
     }
 
     /**
@@ -136,22 +136,22 @@ public class Game {
     /**
      * Play the game. Where the game actually happens
      * */
-    public void play(){
-        while(gameOn){
-            this.board.refill();
-            this.board.getCurrentPlayer().setAvailableCards(this.currCard);
-            if(this.board.getCurrentPlayer().getACards().size() == 0) this.board.getCurrentPlayer().draw(this.board.getDrawDeck());
-            else{
-                boolean x = false;
-                while(!x){
-                   // x = this.board.getCurrentPlayer().play(will handle a mouse event here);
-                }
-
-            }
-            if(this.board.getCurrentPlayer().getScore() >= 500 || this.board.getCurrentPlayer().getHand().size() == 0) gameOn = false;
-        }
-
-    }
+//    public void play(){
+//        while(gameOn){
+//            this.board.refill();
+//            this.board.getCurrentPlayer().setAvailableCards(this.currCard);
+//            if(this.board.getCurrentPlayer().getACards().size() == 0) this.board.getCurrentPlayer().draw(this.board.getDrawDeck());
+//            else{
+//                boolean x = false;
+//                while(!x){
+//                   // x = this.board.getCurrentPlayer().play(will handle a mouse event here);
+//                }
+//
+//            }
+//            if(this.board.getCurrentPlayer().getScore() >= 500 || this.board.getCurrentPlayer().getHand().size() == 0) gameOn = false;
+//        }
+//
+//    }
 
     /*
     Ends the game
