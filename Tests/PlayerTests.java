@@ -18,9 +18,9 @@ public class PlayerTests {
 
     @Test
     public void PlayerTests(){
-        Player p = new Player("Bob", "R");
+        Player p = new Player("Bob", "Normal");
         assertEquals(p.getName(), "Bob");
-        assertEquals(p.getCB(), "R");
+        assertEquals(p.getCB(), "Normal");
 
         assertFalse(p.getUno());
         assertFalse(p.getReady());
@@ -36,7 +36,7 @@ public class PlayerTests {
 
     @Test
     public void PlayerDrawTest(){
-        Player p = new Player("Bob", "R");
+        Player p = new Player("Bob", "Normal");
         Card card = new Card("blue", "5");
         Card card1 = new Card("red", "0");
 
@@ -54,7 +54,7 @@ public class PlayerTests {
 
     @Test
     public void PlayerSetAvailableCardsTest(){
-        Player p = new Player("Bob", "R");
+        Player p = new Player("Bob", "Normal");
         Card card = new Card("blue", "5");
         Card card1 = new Card("green", "7");
         Card card2 = new Card("blue", "7");
@@ -81,7 +81,7 @@ public class PlayerTests {
 
     @Test
     public void PlayerPlayTest(){
-        Player p = new Player("Bob", "R");
+        Player p = new Player("Bob", "Normal");
         Card card = new Card("blue", "5");
         Card card2 = new Card("blue", "7");
 

@@ -13,10 +13,10 @@ public class BoardTests {
 
     @Test
     public void BoardTest(){
-        Player p = new Player("Bob", "R");
-        Player p1 = new Player("Rob", "R");
-        Player p2 = new Player("Larry", "R");
-        Player p3 = new Player("Barry", "R");
+        Player p = new Player("Bob", "Normal");
+        Player p1 = new Player("Rob", "Normal");
+        Player p2 = new Player("Larry", "Normal");
+        Player p3 = new Player("Barry", "Normal");
         Board board = new Board(new Player[]{p, p1, p2, p3});
 
         assertEquals(board.getCurrentPlayer(), p);
@@ -28,10 +28,10 @@ public class BoardTests {
     }
     @Test
     public void BoardDeckTest(){
-        Player p = new Player("Bob", "R");
-        Player p1 = new Player("Rob", "R");
-        Player p2 = new Player("Larry", "R");
-        Player p3 = new Player("Barry", "R");
+        Player p = new Player("Bob", "Normal");
+        Player p1 = new Player("Rob", "Normal");
+        Player p2 = new Player("Larry", "Normal");
+        Player p3 = new Player("Barry", "Normal");
         Board board = new Board(new Player[]{p, p1, p2, p3});
 
 
