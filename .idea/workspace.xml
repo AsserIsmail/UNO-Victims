@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="4bb8febd-416a-4bb3-a2a3-dd30f48250b7" name="Changes" comment="Card class comments pt.1">
-      <change afterPath="$PROJECT_DIR$/base/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UNO-Victims/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO-Victims/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UNO-Victims/Game.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UNO-Victims/Tests/CardTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO-Victims/Tests/CardTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UNO-Victims/base/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO-Victims/base/Board.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,11 +121,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CardTests" />
         <item itemvalue="JUnit.CardTests.CardIsPlayable" />
         <item itemvalue="JUnit.CardTests.CardImageTest" />
         <item itemvalue="JUnit.CardTests.CardEqualsTest" />
-        <item itemvalue="JUnit.CardTests.CardIsPlayable" />
+        <item itemvalue="JUnit.CardTests" />
+        <item itemvalue="JUnit.CardTests" />
       </list>
     </recent_temporary>
   </component>
