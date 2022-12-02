@@ -74,6 +74,10 @@ public class Player {
         return this.isReady;
     }
 
+    public ArrayList<Card> getHand(){
+        return this.hand;
+    }
+
     // iterates through the hand of the player and adds any playable cards to availableCards by comparing each card to the
     // current card in play
     public void setAvailableCards(Card currentCard){
