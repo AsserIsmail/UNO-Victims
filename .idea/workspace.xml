@@ -4,8 +4,9 @@
     <list default="true" id="4bb8febd-416a-4bb3-a2a3-dd30f48250b7" name="Changes" comment="Card class comments pt.1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/DCLL/DCL.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/DCLL/DCL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev-uno" />
+        <entry key="$PROJECT_DIR$" value="dev-uno-Game" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -159,7 +160,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="dev-uno-Game" />
+                        <option value="dev-uno" />
                       </list>
                     </value>
                   </entry>

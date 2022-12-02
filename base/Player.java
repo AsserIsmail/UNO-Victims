@@ -89,10 +89,20 @@ public class Player {
     }
 
     /*
-    Adds score to the player
+    *Adds score to the player
      */
     public void giveScore(int s) {
         this.score += s;
     }
+
+    /*
+     *returns the score of this player
+     */
+    public int getScore() {return this.score;}
+
+    /*
+    *returns the hand of the current player
+     */
+    public ArrayList<Card> getHand() {return this.hand;}
 }
 

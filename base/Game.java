@@ -1,5 +1,7 @@
 package base;
+import java.util.Collections;
 import java.util.Scanner;
+import java.util.Stack;
 /*
 A class representing an uno game
  */
@@ -51,8 +53,7 @@ public class Game {
         } else if (c.getSymbol().equals("reverse")) {
             // Change the direction in board and goes to the next player
             this.board.getCurrentPlayer().giveScore(c.getPoint());
-            if (this.board.getDirection() == 1) this.board.setDirection(-1);
-            else this.board.setDirection(1);
+            this.board.changeDirection();
             this.board.goToNextPlayer();
         } else if (c.getSymbol().equals("color_changer")) {
             // Print options
@@ -120,13 +121,35 @@ public class Game {
      */
     public void startGame(){
         this.gameOn = true;
+        for(Player p: this.board.getPlayers())
+            for(int i = 0;i<7;i++){
+                p.draw(board.getDrawDeck());
+            }
         this.play();
     }
 
-    /*
-    Play the game. Where the game actually happens
-     */
+    /**
+     * Play the game. Where the game actually happens
+     * */
+
+
+    /**
+     * Play the game. Where the game actually happens
+     * */
     public void play(){
+        while(gameOn){
+            this.board.refill();
+            this.board.getCurrentPlayer().setAvailableCards(this.currCard);
+            if(this.board.getCurrentPlayer().getACards().size() == 0) this.board.getCurrentPlayer().draw(this.board.getDrawDeck());
+            else{
+                boolean x = false;
+                while(!x){
+                   // x = this.board.getCurrentPlayer().play(will handle a mouse event here);
+                }
+
+            }
+            if(this.board.getCurrentPlayer().getScore() >= 500 || this.board.getCurrentPlayer().getHand().size() == 0) gameOn = false;
+        }
 
     }
 

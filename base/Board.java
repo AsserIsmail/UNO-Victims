@@ -2,6 +2,7 @@ package base;
 
 import base.DCLL.DCL;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Stack;
 import java.util.Timer;
@@ -12,6 +13,8 @@ import java.util.Timer;
  */
 public class Board {
     private Stack<Card> drawDeck; // the deck of cards
+
+    private Stack<Card> copyDeck; // a copy of the drawDeck
 
     private Stack<Card> discardDeck; // the discard pile
 
@@ -70,6 +73,7 @@ public class Board {
         Collections.shuffle(this.drawDeck);
         this.playedCard = this.drawDeck.pop();
         this.discardDeck.push(this.playedCard);
+        this.copyDeck = (Stack<Card>) this.drawDeck.clone();
     }
 
     /**
@@ -174,11 +178,15 @@ public class Board {
     }
 
     /**
-     * Sets the direction of the game.
+     * Returns list of players.
+     * @return  the list of players
      */
-    public void setDirection(int r) {
-        this.direction = r;
-    }
+    public Player[] getPlayers(){return this.players;}
+
+    /**
+     * changes the direction of the game.
+     */
+    public void changeDirection() {this.direction = -1 * this.direction;}
 
     /**
      * Returns the number of turns that have been played.
@@ -203,6 +211,10 @@ public class Board {
      */
     public Timer getTimeLimit() {
         return this.timeLimit;
+    }
+    public void refill(){
+        if(this.drawDeck.size() < 4) this.drawDeck = this.copyDeck;
+        Collections.shuffle(this.drawDeck);
     }
 
     /*

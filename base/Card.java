@@ -91,9 +91,10 @@ public class Card {
         return this.front_src;
     }
 
-    /*
-    Checks if a card is playable based on the colour and the symbol of the given card.
-     */
+    /**
+    *Checks if a card is playable based on the colour and the symbol of the given card.
+    * @return true if the given card is playable
+    * */
     public boolean isPlayable(Card c){
         return this.symbol.equals(c.getSymbol()) || this.colour.equals(c.getColour());
     }
