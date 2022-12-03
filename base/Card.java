@@ -30,7 +30,7 @@ public class Card {
 
     public static final List<String> symbols = Arrays.asList("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "picker", "skip", "reverse"); // all the possible symbols
 
-    public static final List<String> wilds = Arrays.asList("color_changer", "pick_four"); // all the possible wild cards
+    public static final List<String> wilds = Arrays.asList("color_changer", "pick_four", "replicate"); // all the possible wild cards
 
 /*
  * base.Card constructor.

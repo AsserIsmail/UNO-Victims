@@ -60,6 +60,9 @@ public class Board {
             if (colour.equals("wild")) {
                 for (String symbol : Card.wilds) {
                     drawDeck.push(new Card(colour, symbol));
+                    drawDeck.push(new Card(colour, symbol));
+                    drawDeck.push(new Card(colour, symbol));
+                    drawDeck.push(new Card(colour, symbol));
                 }
             } else {
                 for (String symbol : Card.symbols) {
@@ -71,8 +74,17 @@ public class Board {
             }
         }
         Collections.shuffle(this.drawDeck);
-        this.playedCard = this.drawDeck.pop();
-        this.discardDeck.push(this.playedCard);
+        Card placeHolder = this.drawDeck.pop();
+        while (true) {
+            if (placeHolder.getColour().equals("wild")) {
+                this.discardDeck.push(placeHolder);
+                placeHolder = this.drawDeck.pop();
+            } else {
+                this.playedCard = placeHolder;
+                this.discardDeck.push(this.playedCard);
+                break;
+            }
+        }
         this.copyDeck = (Stack<Card>) this.drawDeck.clone();
     }
 
@@ -167,6 +179,13 @@ public class Board {
      */
     public Card getPlayedCard() {
         return this.playedCard;
+    }
+
+    /**
+     * Sets the played card.
+     */
+    public void setPlayedCard(Card card) {
+        this.playedCard = card;
     }
 
     /**
