@@ -78,18 +78,32 @@ public class Card implements AbstractCard{
     public int getPoint(){return this.point;}
 
     /*
-    Getter method for back image
+    Get the source of the back image of the card
      */
-    public String getBack() {
+    @Override
+    public String getBackSrc() {
         return this.back_src;
     }
 
     /*
-    Getter function for the front image
+    Get the source of the front image of the card
      */
-    public String getFront() {
+    @Override
+    public String getFrontSrc() {
         return this.front_src;
     }
+
+    /*
+    Set the source of the back image of the card
+     */
+    @Override
+    public void setBackSrc(String src){this.back_src = src;}
+
+    /*
+    Set the source of the front image of the card
+     */
+    @Override
+    public void setFrontSrc(String src){this.front_src = src;}
 
     /**
     *Checks if a card is playable based on the colour and the symbol of the given card.

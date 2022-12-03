@@ -26,8 +26,8 @@ public class CardTests {
     public void CardImageTest(){
 
         Card c = new Card("wild", "pick_four");
-        assertEquals(c.getFront(), "wild_pick_four.png");
-        assertEquals(c.getBack(), "card_back.png");
+        assertEquals(c.getFrontSrc(), "wild_pick_four.png");
+        assertEquals(c.getBackSrc(), "card_back.png");
 
     }
 
