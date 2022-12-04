@@ -1,4 +1,4 @@
-package base;
+package base.Cards;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,17 +10,13 @@ import java.util.List;
 /**
  * A class representing an UNO card.
  */
-public class Card {
+public class Card implements AbstractCard{
 
     private String colour; // colour of the card
 
     private String symbol; // symbol of the card
 
     private int point; // the amount of points each card has
-
-    private Image front; // an image of the card's face
-
-    private Image back; // an image of the back of the card
 
     private String front_src; // stores the source of the front image
 
@@ -33,7 +29,7 @@ public class Card {
     public static final List<String> wilds = Arrays.asList("color_changer", "pick_four", "replicate"); // all the possible wild cards
 
 /*
- * base.Card constructor.
+ * base.Cards.Card constructor.
  */
     public Card(String col, String symbol){
 
@@ -53,10 +49,9 @@ public class Card {
             this.point = 50;
         }
 
-        this.back = new ImageIcon("card_back.png").getImage();
+
         this.back_src = "card_back.png";
         String image = col + "_" + symbol + ".png";
-        this.front = new ImageIcon(image).getImage();
         this.front_src = image;
 
     }
@@ -83,16 +78,18 @@ public class Card {
     public int getPoint(){return this.point;}
 
     /*
-    Getter method for back image
+    Get the source of the back image of the card
      */
-    public String getBack() {
+    @Override
+    public String getBackSrc() {
         return this.back_src;
     }
 
     /*
-    Getter function for the front image
+    Get the source of the front image of the card
      */
-    public String getFront() {
+    @Override
+    public String getFrontSrc() {
         return this.front_src;
     }
 
@@ -100,10 +97,14 @@ public class Card {
     *Checks if a card is playable based on the colour and the symbol of the given card.
     * @return true if the given card is playable
     * */
-    public boolean isPlayable(Card c){
+    @Override
+    public boolean isPlayable(AbstractCard c){
         return this.symbol.equals(c.getSymbol()) || this.colour.equals(c.getColour());
     }
 
+    /*
+    Equals method
+     */
     @Override
     public boolean equals(Object o) {
 
