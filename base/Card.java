@@ -62,6 +62,11 @@ public class Card {
     }
 
 
+    public String toString(){
+        return this.colour + " " + this.symbol;
+    }
+
+
     /*
     Getter for the colour
      */
