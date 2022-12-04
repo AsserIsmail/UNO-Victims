@@ -18,10 +18,6 @@ public class Card implements AbstractCard{
 
     private int point; // the amount of points each card has
 
-    private Image front; // an image of the card's face
-
-    private Image back; // an image of the back of the card
-
     private String front_src; // stores the source of the front image
 
     private String back_src; // stores the source of the back image
@@ -57,10 +53,6 @@ public class Card implements AbstractCard{
         this.back_src = "card_back.png";
         String image = col + "_" + symbol + ".png";
         this.front_src = image;
-
-        this.front = new ImageIcon(this.front_src).getImage();
-        this.back = new ImageIcon(this.back_src).getImage();
-
 
     }
 
