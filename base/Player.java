@@ -1,4 +1,6 @@
 package base;
+import base.Cards.Card;
+
 import java. util. *;
 /* The Player Class. Keeps track of information associated with a player*/
 
@@ -68,20 +70,6 @@ public abstract class Player {
         return this.name;
     }
 
-    // return colourblind variant
-    public String getCB(){
-        return this.colourBlind;
-    }
-
-    // set isReady to true
-    public void setReady(){
-        this.isReady = true;
-    }
-
-    // return isReady
-    public boolean getReady(){
-        return this.isReady;
-    }
 
     /**
      * iterates through the hand of the player and adds any playable cards to availableCards by comparing each card to the
