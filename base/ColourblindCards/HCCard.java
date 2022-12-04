@@ -26,13 +26,37 @@ public class HCCard extends CardDecorator {
     /*
     Get the source of the front image of the card
      */
-    public String getFrontSrc() {return card.getFrontSrc() + filter;}
+    public String getFrontSrc() {
+
+        if (this.card.getFrontSrc().contains("HC")){
+            return this.card.getFrontSrc();
+        } else if (this.card.getFrontSrc().contains("SG-BK")) {
+            return this.card.getFrontSrc().replace("SG-BK", this.filter);
+        } else if (this.card.getFrontSrc().contains("SG")) {
+            return this.card.getFrontSrc().replace("SG", this.filter);
+        } else if (this.card.getFrontSrc().contains("SG-HC")) {
+            return this.card.getFrontSrc().replace("SG-HC", this.filter);
+        } else return this.card.getFrontSrc() + this.filter;
+
+    }
 
 
     /*
     Get the source of the back image of the card
      */
-    public String getBackSrc(){return card.getBackSrc() + filter;}
+    public String getBackSrc(){
+
+        if (this.card.getBackSrc().contains("HC")){
+            return this.card.getBackSrc();
+        } else if (this.card.getBackSrc().contains("SG-BK")) {
+            return this.card.getBackSrc().replace("SG-BK", this.filter);
+        } else if (this.card.getBackSrc().contains("SG")) {
+            return this.card.getBackSrc().replace("SG", this.filter);
+        } else if (this.card.getBackSrc().contains("SG-HC")) {
+            return this.card.getBackSrc().replace("SG-HC", this.filter);
+        } else return this.card.getBackSrc() + this.filter;
+
+    }
 
 
     /*
