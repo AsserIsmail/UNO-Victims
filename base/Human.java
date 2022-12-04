@@ -1,5 +1,7 @@
 package base;
 
+import base.Cards.Card;
+
 public class Human extends Player{
     private String colourBlind; // the form of colourblindness that this player has
 

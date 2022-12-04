@@ -1,6 +1,6 @@
 package Tests;
-import base.Card;
 import base.DCLL.DCL;
+import base.Human;
 import base.Player;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -15,10 +15,10 @@ public class DCLLTests {
 
     @Test
     public void CreationDCLTest(){
-        Player p = new Player("Bob", "R");
-        Player p1 = new Player("Rob", "R");
-        Player p2 = new Player("Larry", "R");
-        Player p3 = new Player("Barry", "R");
+        Player p = new Human("Bob", "R");
+        Player p1 = new Human("Rob", "R");
+        Player p2 = new Human("Larry", "R");
+        Player p3 = new Human("Barry", "R");
 
         DCL dcl = new DCL(4, new Player[]{p, p1, p2, p3});
 
@@ -28,7 +28,7 @@ public class DCLLTests {
 
         for (int i = 0; i<4; i++){
             assertEquals(dcl.giveCurr(), result.get(i));
-            dcl.giveNext(1);
+            dcl.getNext(1);
         }
 
         ArrayList<Player> result1 = new ArrayList<>(List.of(new Player[]{p, p3, p2, p1}));
@@ -38,7 +38,7 @@ public class DCLLTests {
 
         for (int i = 0; i<4; i++){
             assertEquals(dcl.giveCurr(), result1.get(i));
-            dcl.giveNext(-1);
+            dcl.getNext(-1);
         }
 
 

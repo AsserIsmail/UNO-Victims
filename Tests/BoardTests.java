@@ -2,22 +2,25 @@ package Tests;
 
 
 import base.Board;
-import base.Card;
+import base.Cards.Card;
+import base.Human;
 import base.Player;
 import org.junit.jupiter.api.Test;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class BoardTests {
 
     @Test
     public void BoardTest(){
-        Player p = new Player("Bob", "Normal");
-        Player p1 = new Player("Rob", "Normal");
-        Player p2 = new Player("Larry", "Normal");
-        Player p3 = new Player("Barry", "Normal");
+        Player p = new Human("Bob", "Normal");
+        Player p1 = new Human("Rob", "Normal");
+        Player p2 = new Human("Larry", "Normal");
+        Player p3 = new Human("Barry", "Normal");
         Board board = new Board(new Player[]{p, p1, p2, p3});
 
         assertEquals(board.getCurrentPlayer(), p);
@@ -29,14 +32,14 @@ public class BoardTests {
     }
     @Test
     public void BoardDeckTest(){
-        Player p = new Player("Bob", "Normal");
-        Player p1 = new Player("Rob", "Normal");
-        Player p2 = new Player("Larry", "Normal");
-        Player p3 = new Player("Barry", "Normal");
+        Player p = new Human("Bob", "Normal");
+        Player p1 = new Human("Rob", "Normal");
+        Player p2 = new Human("Larry", "Normal");
+        Player p3 = new Human("Barry", "Normal");
         Board board = new Board(new Player[]{p, p1, p2, p3});
 
 
-        ArrayList result1 = new ArrayList<>(List.of(new String[]{"blue 0", "blue 1", "blue 1", "blue 2", "blue 2",
+        ArrayList result1 = new ArrayList<>(List.of("blue 0", "blue 1", "blue 1", "blue 2", "blue 2",
                 "blue 3", "blue 3", "blue 4", "blue 4", "blue 5", "blue 5", "blue 6", "blue 6", "blue 7", "blue 7",
                 "blue 8", "blue 8", "blue 9", "blue 9", "blue picker", "blue picker", "blue skip", "blue skip", "" +
                 "blue reverse", "blue reverse", "green 0", "green 1", "green 1", "green 2", "green 2", "green 3",
@@ -49,7 +52,7 @@ public class BoardTests {
                 "red 2", "red 3", "red 3", "red 4", "red 4", "red 5", "red 5", "red 6", "red 6", "red 7", "red 7",
                 "red 8", "red 8", "red 9", "red 9", "red picker", "red picker", "red skip", "red skip", "red reverse",
                 "red reverse", "wild color_changer", "wild pick_four", "wild color_changer", "wild pick_four",
-                "wild color_changer", "wild pick_four", "wild color_changer", "wild pick_four"}));
+                "wild color_changer", "wild pick_four", "wild color_changer", "wild pick_four"));
 
 
 
@@ -59,12 +62,6 @@ public class BoardTests {
 
         assertEquals(result.size(), result1.size()-1);
 
-
-
-        for (Card card: result){
-            assertTrue(result1.contains(card.toString()));
-
-        }
         for (Object card: result1){
             Card card1 = new Card(card.toString().split(" ")[0],card.toString().split(" ")[1]);
             assertTrue(result.contains(card1));
