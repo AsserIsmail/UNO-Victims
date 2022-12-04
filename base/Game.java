@@ -37,31 +37,32 @@ public class Game {
         if card is skip: just skip the next player
         if card is reverse: next player is previous player and the order reverses
          */
+        Card prevCard = null;
+        if (!this.board.getPlayedCard().getSymbol().equals("replicate")) {
+            prevCard = this.board.getPlayedCard();
+            this.board.getDiscardDeck().push(c);
+        }
+        this.currCard = c;
+        this.board.setPlayedCard(this.currCard);
+        this.board.getCurrentPlayer().giveScore(this.currCard.getPoint());
 
-        if (c.getSymbol().equals("picker")) {
-            // Go to the next player, draw to cards, go to the next player again.
-            this.board.getCurrentPlayer().giveScore(c.getPoint());
-            this.board.setPlayedCard(c);
+
+        if (this.currCard.getSymbol().equals("picker")) {
+            // Go to the next player, draw to cards, go to the next player again. implementation
             this.board.goToNextPlayer();
             this.board.getCurrentPlayer().draw(this.board.getDrawDeck());
             this.board.getCurrentPlayer().draw(this.board.getDrawDeck());
             this.board.goToNextPlayer();
-        } else if (c.getSymbol().equals("skip")) {
+        } else if (this.currCard.getSymbol().equals("skip")) {
             // Skip the first player
-            this.board.getCurrentPlayer().giveScore(c.getPoint());
-            this.board.setPlayedCard(c);
             this.board.goToNextPlayer();
             this.board.goToNextPlayer();
-        } else if (c.getSymbol().equals("reverse")) {
+        } else if (this.currCard.getSymbol().equals("reverse")) {
             // Change the direction in board and goes to the next player
-            this.board.getCurrentPlayer().giveScore(c.getPoint());
-            this.board.setPlayedCard(c);
             this.board.changeDirection();
             this.board.goToNextPlayer();
-        } else if (c.getSymbol().equals("color_changer")) {
+        } else if (this.currCard.getSymbol().equals("color_changer")) {
             // Print options
-            this.board.getCurrentPlayer().giveScore(c.getPoint());
-            this.board.setPlayedCard(c);
             System.out.println("Enter colour number:");
             System.out.println("Blue -> 1");
             System.out.println("Red -> 2");
@@ -80,10 +81,8 @@ public class Game {
             this.board.setCurrCol(this.currColour);
             this.board.goToNextPlayer();
 
-        } else if (c.getSymbol().equals("pick_four")) {
+        } else if (this.currCard.getSymbol().equals("pick_four")) {
             // Print options
-            this.board.getCurrentPlayer().giveScore(c.getPoint());
-            this.board.setPlayedCard(c);
             System.out.println("Enter colour number:");
             System.out.println("Blue -> 1");
             System.out.println("Red -> 2");
@@ -109,15 +108,10 @@ public class Game {
             this.board.getCurrentPlayer().draw(this.board.getDrawDeck());
 
         }
-        else if (c.getSymbol().equals("replicate")) {
-            // Print options
-            this.board.getCurrentPlayer().giveScore(c.getPoint());
-            Card playedCard = this.board.getPlayedCard();
-            this.board.setPlayedCard(playedCard);
-            executeCard(this.board.getPlayedCard());
+        else if (this.currCard.getSymbol().equals("replicate")) {
+            executeCard(prevCard);
 
         } else {
-            this.board.getCurrentPlayer().giveScore(c.getPoint());
             this.board.goToNextPlayer();
         }
     }
