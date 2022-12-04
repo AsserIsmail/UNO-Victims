@@ -26,7 +26,7 @@ public class HCCard extends CardDecorator {
     /*
     Get the source of the front image of the card
      */
-    public String getFrontSrc() {return card.getFrontSrc();}
+    public String getFrontSrc() {return card.getFrontSrc() + filter;}
 
     /*
     Set the source of the front image of the card
@@ -36,7 +36,7 @@ public class HCCard extends CardDecorator {
     /*
     Get the source of the back image of the card
      */
-    public String getBackSrc(){return card.getBackSrc();}
+    public String getBackSrc(){return card.getBackSrc() + filter;}
 
     /*
     Set the source of the back image of the card
