@@ -44,13 +44,23 @@ public abstract class Player {
     }
 
     /**
-     * sets the uno status to true
+
+     * Sets the status of Uno for the player
      */
-    public void uno(){
+    public void setUno(){
+
         this.isUno = true;
     }
 
     /**
+
+     * Returns true if the player has said uno, false otherwise
+     * @return isUno
+     */
+    public boolean getUno(){
+        return this.isUno;
+    }
+
      * returns the name of the given player
      * @return the players name
      */
@@ -58,12 +68,14 @@ public abstract class Player {
         return this.name;
     }
 
-    /**
-     * returns the players uno status
-     * @return true if the player has an uno status
-     */
-    public boolean getUno(){
-        return this.isUno;
+    // return colourblind variant
+    public String getCB(){
+        return this.colourBlind;
+    }
+
+    // set isReady to true
+    public void setReady(){
+        this.isReady = true;
     }
 
     // return isReady
