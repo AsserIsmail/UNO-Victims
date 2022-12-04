@@ -13,6 +13,11 @@ public abstract class CardDecorator implements AbstractCard {
     private AbstractCard card;
 
     /*
+    Colourblind mode.
+     */
+    public String filter;
+
+    /*
     Get the source of the front image of the card
      */
     public String getFrontSrc() {throw new UnsupportedOperationException();}
