@@ -66,6 +66,11 @@ public abstract class Player {
         return this.isUno;
     }
 
+    // return isReady
+    public boolean getReady(){
+        return this.isReady;
+    }
+
     /**
      * iterates through the hand of the player and adds any playable cards to availableCards by comparing each card to the
      * current card in play

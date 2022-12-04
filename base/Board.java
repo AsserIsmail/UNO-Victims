@@ -60,6 +60,9 @@ public class Board {
             if (colour.equals("wild")) {
                 for (String symbol : Card.wilds) {
                     drawDeck.push(new Card(colour, symbol));
+                    drawDeck.push(new Card(colour, symbol));
+                    drawDeck.push(new Card(colour, symbol));
+                    drawDeck.push(new Card(colour, symbol));
                 }
             } else {
                 for (String symbol : Card.symbols) {
