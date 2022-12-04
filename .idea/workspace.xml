@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bb8febd-416a-4bb3-a2a3-dd30f48250b7" name="Changes" comment="Card class comments pt.1">
-      <change beforePath="$PROJECT_DIR$/base/ColourblindCards/CardDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/ColourblindCards/CardDecorator.java" afterDir="false" />
-    </list>
+    <list default="true" id="4bb8febd-416a-4bb3-a2a3-dd30f48250b7" name="Changes" comment="Card class comments pt.1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

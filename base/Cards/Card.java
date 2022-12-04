@@ -53,11 +53,14 @@ public class Card implements AbstractCard{
             this.point = 50;
         }
 
-        this.back = new ImageIcon("card_back.png").getImage();
+
         this.back_src = "card_back.png";
         String image = col + "_" + symbol + ".png";
-        this.front = new ImageIcon(image).getImage();
         this.front_src = image;
+
+        this.front = new ImageIcon(this.front_src).getImage();
+        this.back = new ImageIcon(this.back_src).getImage();
+
 
     }
 
