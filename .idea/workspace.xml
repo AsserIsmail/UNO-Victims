@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bb8febd-416a-4bb3-a2a3-dd30f48250b7" name="Changes" comment="Card class comments pt.1" />
+    <list default="true" id="4bb8febd-416a-4bb3-a2a3-dd30f48250b7" name="Changes" comment="Card class comments pt.1">
+      <change beforePath="$PROJECT_DIR$/base/Cards/AbstractCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/Cards/AbstractCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/Cards/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/Cards/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/ColourblindCards/CardDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/ColourblindCards/CardDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/ColourblindCards/HCCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/ColourblindCards/HCCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/ColourblindCards/SGBKCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/ColourblindCards/SGBKCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/ColourblindCards/SGCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/ColourblindCards/SGCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/ColourblindCards/SGHCCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/ColourblindCards/SGHCCard.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

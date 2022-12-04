@@ -11,17 +11,17 @@ public interface AbstractCard {
     public String getFrontSrc();
 
     /*
-    Set the source of the front image of the card
-     */
-    public void setFrontSrc(String src);
-
-    /*
     Get the source of the back image of the card
      */
     public String getBackSrc();
 
     /*
-    Set the source of the back image of the card
+    Checks to see if a card is playable, given a previous card.
      */
-    public void setBackSrc(String src);
+    public boolean isPlayable(Card c);
+
+    /*
+    Equals method
+     */
+    public boolean equals(Object o);
 }

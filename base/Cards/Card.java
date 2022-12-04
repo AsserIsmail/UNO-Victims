@@ -88,26 +88,18 @@ public class Card implements AbstractCard{
         return this.front_src;
     }
 
-    /*
-    Set the source of the back image of the card
-     */
-    @Override
-    public void setBackSrc(String src){this.back_src = src;}
-
-    /*
-    Set the source of the front image of the card
-     */
-    @Override
-    public void setFrontSrc(String src){this.front_src = src;}
-
     /**
     *Checks if a card is playable based on the colour and the symbol of the given card.
     * @return true if the given card is playable
     * */
+    @Override
     public boolean isPlayable(Card c){
         return this.symbol.equals(c.getSymbol()) || this.colour.equals(c.getColour());
     }
 
+    /*
+    Equals method
+     */
     @Override
     public boolean equals(Object o) {
 

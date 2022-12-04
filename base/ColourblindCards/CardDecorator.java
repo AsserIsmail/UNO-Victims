@@ -1,6 +1,7 @@
 package base.ColourblindCards;
 
 import base.Cards.AbstractCard;
+import base.Cards.Card;
 
 /*
 Card decorator Class
@@ -10,7 +11,7 @@ public abstract class CardDecorator implements AbstractCard {
     /*
     Holds the card which will be then decorated
      */
-    private AbstractCard card;
+    private Card card;
 
     /*
     Colourblind mode.
@@ -23,18 +24,19 @@ public abstract class CardDecorator implements AbstractCard {
     public String getFrontSrc() {throw new UnsupportedOperationException();}
 
     /*
-    Set the source of the front image of the card
-     */
-    public void setFrontSrc(String src){throw new UnsupportedOperationException();}
-
-    /*
     Get the source of the back image of the card
      */
     public String getBackSrc(){throw new UnsupportedOperationException();}
 
     /*
-    Set the source of the back image of the card
+    Checks to see if a card is playable, given a previous card.
      */
-    public void setBackSrc(String src){throw new UnsupportedOperationException();}
+    public boolean isPlayable(Card c){throw new UnsupportedOperationException();}
+
+
+    /*
+    Equals method
+     */
+    public boolean equals(Object o){throw new UnsupportedOperationException();}
 
 }

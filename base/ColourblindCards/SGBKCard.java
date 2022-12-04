@@ -1,6 +1,6 @@
 package base.ColourblindCards;
 
-import base.Cards.AbstractCard;
+import base.Cards.Card;
 
 public class SGBKCard extends CardDecorator{
 
@@ -8,7 +8,7 @@ public class SGBKCard extends CardDecorator{
     /*
     Holds the card which will be then decorated
     */
-    private AbstractCard card;
+    private Card card;
 
     /*
     Colourblind mode.
@@ -17,7 +17,7 @@ public class SGBKCard extends CardDecorator{
 
 
 
-    public SGBKCard(AbstractCard card){
+    public SGBKCard(Card card){
         this.card = card;
         this.filter = "SG-BK";
     }
@@ -29,19 +29,21 @@ public class SGBKCard extends CardDecorator{
     public String getFrontSrc() {return card.getFrontSrc() + filter;}
 
     /*
-    Set the source of the front image of the card
-     */
-    public void setFrontSrc(String src){this.card.setFrontSrc(src);}
-
-    /*
     Get the source of the back image of the card
      */
     public String getBackSrc(){return card.getBackSrc() + filter;}
 
     /*
-    Set the source of the back image of the card
+    Checks to see if a card is playable, given a previous card.
      */
-    public void setBackSrc(String src){this.setBackSrc(src);}
+    public boolean isPlayable(Card c){return this.card.isPlayable(c);}
+
+
+    /*
+    Equals method
+     */
+    @Override
+    public boolean equals(Object o){return this.card.equals(o);}
 
 
 }
