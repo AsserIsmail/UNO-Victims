@@ -60,7 +60,7 @@ public abstract class Player {
     public boolean getUno(){
         return this.isUno;
     }
-
+    /*
      * returns the name of the given player
      * @return the players name
      */
