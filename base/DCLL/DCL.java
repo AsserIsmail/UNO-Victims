@@ -52,17 +52,26 @@ public class DCL {
     /*
     Gives the next player according to the rotation of the came. (e.g. clockwise or counterclockwise)
      */
-    public Player giveNext(int r){
+    public Player getNext(int r){
 
         if (r == 1){
-            this.head = this.head.next;
-            return this.head.player;
+            return this.head.next.player;
         } else if (r == -1){
-            this.head = this.head.prev;
-            return this.head.player;
+            return this.head.prev.player;
         }
 
         return null;
+    }
+
+    /*
+    Goes to the next player
+     */
+    public void goToNext(int r) {
+        if (r == 1){
+            this.head = this.head.next;
+        } else if (r == -1){
+            this.head = this.head.prev;
+        }
     }
 
     public Player giveCurr(){

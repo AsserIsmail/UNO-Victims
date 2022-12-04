@@ -2,6 +2,7 @@ package base;
 
 import base.DCLL.DCL;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Stack;
 import java.util.Timer;
@@ -13,6 +14,8 @@ import java.util.Timer;
 public class Board {
     private Stack<Card> drawDeck; // the deck of cards
 
+    private Stack<Card> copyDeck; // a copy of the drawDeck
+
     private Stack<Card> discardDeck; // the discard pile
 
     private Card playedCard; // the card that is currently on the board
@@ -22,6 +25,8 @@ public class Board {
     private DCL table; // keeps track of the order of the game and players' turn direction
 
     private Player currentPlayer; // the current player
+
+    private String currentCol; // Current colour on the board
 
     private int direction; // the direction of play (1 for clockwise, -1 for counterclockwise)
 
@@ -47,7 +52,7 @@ public class Board {
         this.timeLimit = new Timer();
         this.isUno = false;
         this.drawDeck = new Stack<>();
-
+        this.currentCol = null;
         this.table = new DCL(this.numPlayers, allPlayers); // the turn object on the board
         this.currentPlayer = this.table.giveCurr();
 
@@ -71,6 +76,7 @@ public class Board {
         Collections.shuffle(this.drawDeck);
         this.playedCard = this.drawDeck.pop();
         this.discardDeck.push(this.playedCard);
+        this.copyDeck = (Stack<Card>) this.drawDeck.clone();
     }
 
     /**
@@ -82,12 +88,21 @@ public class Board {
     }
 
     /**
-     * Returns the next player and changes the current player to the next player.
+     * Returns the next player.
      * @return  the next player
      */
     public Player getNextPlayer() {
-        return this.table.giveNext(this.direction);
+        return this.table.getNext(this.direction);
     }
+
+
+    /**
+     * Changes the current player to the next player
+     */
+    public void goToNextPlayer() {
+        this.table.goToNext(this.direction);
+    }
+
 
     /**
      * Returns the current player's index.
@@ -166,6 +181,17 @@ public class Board {
     }
 
     /**
+     * Returns list of players.
+     * @return  the list of players
+     */
+    public Player[] getPlayers(){return this.players;}
+
+    /**
+     * changes the direction of the game.
+     */
+    public void changeDirection() {this.direction = -1 * this.direction;}
+
+    /**
      * Returns the number of turns that have been played.
      * @return  the number of turns that have been played
      */
@@ -189,6 +215,16 @@ public class Board {
     public Timer getTimeLimit() {
         return this.timeLimit;
     }
+    public void refill(){
+        if(this.drawDeck.size() < 4) this.drawDeck = this.copyDeck;
+        Collections.shuffle(this.drawDeck);
+    }
 
+    /*
+    Change the current colour
+     */
+    public void setCurrCol(String colour){
+        this.currentCol = colour;
+    }
 
 }
