@@ -134,10 +134,7 @@ public class Game implements State {
      */
     public void startGame(){
         this.gameOn = true;
-        for(Player p: this.board.getPlayers())
-            for(int i = 0;i<7;i++){
-                p.draw(board.getDrawDeck());
-            }
+        for(Player p: this.board.getPlayers()) p.deal(board.getDrawDeck());
         // this.play();
     }
 
