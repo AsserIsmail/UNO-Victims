@@ -6,7 +6,7 @@ import java.util.Stack;
 A class representing an uno game
  */
 
-public class Game {
+public class Game implements State {
 
     public Board board; // Stores the current State of the board
 
@@ -26,32 +26,35 @@ public class Game {
         this.gameOn = false;
     }
 
-    /*
-    Executes the current card
+    /**
+     * Executes the current card
+     * if card is +2: then add 2 cards to the next player and skip round
+     * if card is +4: then choose a colour and add 4 to next player and skip round
+     * if card is wild: just change the colour
+     * if card is skip: just skip the next player
+     * if card is reverse: next player is previous player and the order reverses
+     * if card is a number: just play the card
+     *
+     * @param c is a Card object that has been played
+     * @param p is a Player object that has played the card
      */
-    public void executeCard(Card c){
-        /*
-        if card is +2: then add 2 cards to the next player and skip round
-        if card is +4: then choose a colour and add 4 to next player and skip round
-        if card is wild: just change the colour
-        if card is skip: just skip the next player
-        if card is reverse: next player is previous player and the order reverses
-         */
+    @Override
+    public void executeCard(Card c, Player p) {
         Card prevCard = null;
         if (!this.board.getPlayedCard().getSymbol().equals("replicate")) {
             prevCard = this.board.getPlayedCard();
             this.board.getDiscardDeck().push(c);
         }
         this.currCard = c;
+        this.currColour = c.getColour();
         this.board.setPlayedCard(this.currCard);
-        this.board.getCurrentPlayer().giveScore(this.currCard.getPoint());
-
+        p.giveScore(this.currCard.getPoint());
 
         if (this.currCard.getSymbol().equals("picker")) {
             // Go to the next player, draw to cards, go to the next player again. implementation
             this.board.goToNextPlayer();
-            this.board.getCurrentPlayer().draw(this.board.getDrawDeck());
-            this.board.getCurrentPlayer().draw(this.board.getDrawDeck());
+            p.draw(this.board.getDrawDeck());
+            p.draw(this.board.getDrawDeck());
             this.board.goToNextPlayer();
         } else if (this.currCard.getSymbol().equals("skip")) {
             // Skip the first player
@@ -102,25 +105,28 @@ public class Game {
             this.board.goToNextPlayer();
 
             // Pick the extra 4 cards.
-            this.board.getCurrentPlayer().draw(this.board.getDrawDeck());
-            this.board.getCurrentPlayer().draw(this.board.getDrawDeck());
-            this.board.getCurrentPlayer().draw(this.board.getDrawDeck());
-            this.board.getCurrentPlayer().draw(this.board.getDrawDeck());
+            p.draw(this.board.getDrawDeck());
+            p.draw(this.board.getDrawDeck());
+            p.draw(this.board.getDrawDeck());
+            p.draw(this.board.getDrawDeck());
 
         }
         else if (this.currCard.getSymbol().equals("replicate")) {
-            executeCard(prevCard);
+            executeCard(prevCard, p);
 
         } else {
             this.board.goToNextPlayer();
         }
     }
 
-    /*
-    When a player calls uno
+    /**
+     * When a player calls uno and has only one card left in their hand
+     * @param p is a Player object that has called uno
      */
     public void callUno(Player p){
-        p.uno();
+        if (p.getHand().size() == 1){
+            p.setUno();
+        }
     }
 
     /*

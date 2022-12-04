@@ -45,14 +45,19 @@ public class Player {
         return false;
     }
 
-    // set isUno to true
-    public void uno(){
+    /**
+     * Sets the status of Uno for the player
+     */
+    public void setUno(){
         this.isUno = true;
     }
 
-    // set isReady to true
-    public void setReady(){
-        this.isReady = true;
+    /**
+     * Returns true if the player has said uno, false otherwise
+     * @return isUno
+     */
+    public boolean getUno(){
+        return this.isUno;
     }
 
     // return name of player
@@ -65,9 +70,9 @@ public class Player {
         return this.colourBlind;
     }
 
-    // return isUno
-    public boolean getUno(){
-        return this.isUno;
+    // set isReady to true
+    public void setReady(){
+        this.isReady = true;
     }
 
     // return isReady
