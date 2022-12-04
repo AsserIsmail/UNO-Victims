@@ -15,10 +15,21 @@ public interface AbstractCard {
      */
     public String getBackSrc();
 
+
+    /*
+    Getter for the colour
+    */
+    public String getColour();
+
+    /*
+    Getter for the symbol
+     */
+    public String getSymbol();
+
     /*
     Checks to see if a card is playable, given a previous card.
      */
-    public boolean isPlayable(Card c);
+    public boolean isPlayable(AbstractCard c);
 
     /*
     Equals method

@@ -6,7 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="4bb8febd-416a-4bb3-a2a3-dd30f48250b7" name="Changes" comment="Card class comments pt.1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ColourBlindTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ColourBlindTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/Cards/AbstractCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/Cards/AbstractCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/Cards/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/Cards/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/ColourblindCards/CardDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/ColourblindCards/CardDecorator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/ColourblindCards/HCCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/ColourblindCards/HCCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/ColourblindCards/SGBKCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/ColourblindCards/SGBKCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/ColourblindCards/SGCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/ColourblindCards/SGCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/ColourblindCards/SGHCCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/ColourblindCards/SGHCCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO-Victims/Tests/CardTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO-Victims/Tests/CardTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO-Victims/base/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO-Victims/base/Player.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,8 +73,8 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CardTests">
-    <configuration name="CardTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ColourBlindTests.nestedTest">
+    <configuration name="ColourBlindTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UNO-Victims" />
       <extension name="coverage">
         <pattern>
@@ -74,13 +83,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.CardTests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.ColourBlindTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardTests.CardEqualsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ColourBlindTests.DecorateIsPlayableTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UNO-Victims" />
       <extension name="coverage">
         <pattern>
@@ -89,14 +98,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.CardTests" />
-      <option name="METHOD_NAME" value="CardEqualsTest" />
+      <option name="MAIN_CLASS_NAME" value="Tests.ColourBlindTests" />
+      <option name="METHOD_NAME" value="DecorateIsPlayableTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardTests.CardImageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ColourBlindTests.DecorateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UNO-Victims" />
       <extension name="coverage">
         <pattern>
@@ -105,14 +114,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.CardTests" />
-      <option name="METHOD_NAME" value="CardImageTest" />
+      <option name="MAIN_CLASS_NAME" value="Tests.ColourBlindTests" />
+      <option name="METHOD_NAME" value="DecorateTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardTests.CardIsPlayable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ColourBlindTests.equalsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UNO-Victims" />
       <extension name="coverage">
         <pattern>
@@ -121,8 +130,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.CardTests" />
-      <option name="METHOD_NAME" value="CardIsPlayable" />
+      <option name="MAIN_CLASS_NAME" value="Tests.ColourBlindTests" />
+      <option name="METHOD_NAME" value="equalsTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ColourBlindTests.nestedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UNO-Victims" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.ColourBlindTests" />
+      <option name="METHOD_NAME" value="nestedTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CardTests" />
-        <item itemvalue="JUnit.CardTests.CardIsPlayable" />
-        <item itemvalue="JUnit.CardTests.CardImageTest" />
-        <item itemvalue="JUnit.CardTests.CardEqualsTest" />
-        <item itemvalue="JUnit.CardTests" />
+        <item itemvalue="JUnit.ColourBlindTests.nestedTest" />
+        <item itemvalue="JUnit.ColourBlindTests.equalsTest" />
+        <item itemvalue="JUnit.ColourBlindTests" />
+        <item itemvalue="JUnit.ColourBlindTests.DecorateIsPlayableTest" />
+        <item itemvalue="JUnit.ColourBlindTests.DecorateTest" />
       </list>
     </recent_temporary>
   </component>

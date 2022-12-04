@@ -93,7 +93,7 @@ public class Card implements AbstractCard{
     * @return true if the given card is playable
     * */
     @Override
-    public boolean isPlayable(Card c){
+    public boolean isPlayable(AbstractCard c){
         return this.symbol.equals(c.getSymbol()) || this.colour.equals(c.getColour());
     }
 

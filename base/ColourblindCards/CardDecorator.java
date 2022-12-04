@@ -11,12 +11,11 @@ public abstract class CardDecorator implements AbstractCard {
     /*
     Holds the card which will be then decorated
      */
-    private Card card;
+    public AbstractCard card;
 
-    /*
-    Colourblind mode.
-     */
-    public String filter;
+    public CardDecorator(AbstractCard c){
+        this.card = c;
+    }
 
     /*
     Get the source of the front image of the card

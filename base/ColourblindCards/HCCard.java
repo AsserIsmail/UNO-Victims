@@ -1,14 +1,9 @@
 package base.ColourblindCards;
 
+import base.Cards.AbstractCard;
 import base.Cards.Card;
 
 public class HCCard extends CardDecorator {
-
-
-    /*
-    Holds the card which will be then decorated
-     */
-    private Card card;
 
     /*
     Colourblind mode.
@@ -16,9 +11,8 @@ public class HCCard extends CardDecorator {
     public String filter;
 
 
-
-    public HCCard(Card card){
-        this.card = card;
+    public HCCard(AbstractCard card){
+        super(card);
         this.filter = "HC";
     }
 
@@ -36,7 +30,12 @@ public class HCCard extends CardDecorator {
             return this.card.getFrontSrc().replace("SG", this.filter);
         } else if (this.card.getFrontSrc().contains("SG-HC")) {
             return this.card.getFrontSrc().replace("SG-HC", this.filter);
-        } else return this.card.getFrontSrc() + this.filter;
+        } else {
+            String start = card.getFrontSrc();
+            int i = start.indexOf(".png");
+            String sub = start.substring(0, i);
+            return sub +"_"+filter+".png";
+        }
 
     }
 
@@ -54,21 +53,40 @@ public class HCCard extends CardDecorator {
             return this.card.getBackSrc().replace("SG", this.filter);
         } else if (this.card.getBackSrc().contains("SG-HC")) {
             return this.card.getBackSrc().replace("SG-HC", this.filter);
-        } else return this.card.getBackSrc() + this.filter;
+        } else {
+            String start = card.getBackSrc();
+            int i = start.indexOf(".png");
+            String sub = start.substring(0, i);
+            return sub +"_"+filter+".png";
+        }
 
     }
 
+    /*
+    Getter for the colour
+    */
+    public String getColour(){return this.card.getColour();}
+
+    /*
+    Getter for the symbol
+     */
+    public String getSymbol(){return this.card.getSymbol();}
 
     /*
     Checks to see if a card is playable, given a previous card.
      */
-    public boolean isPlayable(Card c){return this.card.isPlayable(c);}
+    public boolean isPlayable(AbstractCard c){return this.card.isPlayable(c);}
 
 
     /*
     Equals method
      */
     @Override
-    public boolean equals(Object o){return this.card.equals(o);}
+    public boolean equals(Object o){
+
+        if (o instanceof Card) return this.card.equals(o);
+        else if (o instanceof CardDecorator) return this.card.equals(((CardDecorator) o).card);
+        else return false;
+    }
 
 }
