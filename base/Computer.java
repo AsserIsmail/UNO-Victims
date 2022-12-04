@@ -1,5 +1,7 @@
 package base;
 
+import base.Cards.Card;
+
 import java.util.Optional;
 import java.util.Random;
 
