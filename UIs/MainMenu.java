@@ -5,7 +5,6 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Slider;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
@@ -14,6 +13,10 @@ public class MainMenu extends Application {
     Button playButton; // Button to start the game
 
     ChoiceBox cBots; // Choose the number of bots
+
+    String numBots; // Number of chosen bots
+
+    String colour; // Chosen colour option
 
     ChoiceBox cColour; // Choose the colourblind mode
 
@@ -31,13 +34,19 @@ public class MainMenu extends Application {
         //Setup play button
         playButton = new Button();
         playButton.setText("Play Single player");
+        playButton.setOnAction(e -> {
+            numBots = (String) cBots.getValue();
+            colour = (String) cColour.getValue();
+            new Singleplayer(colour, numBots);
+        });
 
         //Adding the choice-box for the number of bots
-        cBots = new ChoiceBox<Object>();
+        cBots = new ChoiceBox<String>();
         cBots.setValue("Bots");
-        cBots.getItems().add(1);
-        cBots.getItems().add(2);
-        cBots.getItems().add(3);
+        cBots.getItems().add("1");
+        cBots.getItems().add("2");
+        cBots.getItems().add("3");
+
 
 
         //Adding the choice-box for the colourblind mode
@@ -48,6 +57,7 @@ public class MainMenu extends Application {
         cColour.getItems().add("High Contrast Signed");
         cColour.getItems().add("Normal Signed");
         cColour.getItems().add("Black and White Signed");
+
 
 
         //Putting it all together

@@ -5,13 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4bb8febd-416a-4bb3-a2a3-dd30f48250b7" name="Changes" comment="Card class comments pt.1">
-      <change beforePath="$PROJECT_DIR$/.idea/UNO-Victims.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/UNO-Victims.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-28,_1_18_p_m__[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-28__1_18_p_m___Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIs/BoardView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIs/Lobby.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/UIs/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIs/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UNO-Victims/.idea/UNO-Victims.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO-Victims/.idea/UNO-Victims.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIs/Multiplayer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIs/Singleplayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIs/Singleplayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO-Victims/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-28,_1_18_p_m__[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO-Victims/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-28__1_18_p_m___Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/UNO-Victims/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO-Victims/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/UNO-Victims/UIs/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO-Victims/UIs/MainMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UNO-Victims/base/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO-Victims/base/Board.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +37,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
