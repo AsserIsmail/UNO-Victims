@@ -24,7 +24,7 @@ public class Singleplayer extends Stage {
         ImageView deck = new ImageView();
         deck.setImage(new Image("./Card variations/Normal/card_back.png"));
         y.getChildren().add(deck);
-        y.setAlignment(deck, Pos.CENTER);
+        StackPane.setAlignment(deck, Pos.BOTTOM_RIGHT);
 
         //Show everything
         this.setScene(new Scene(y, 1500, 700));
