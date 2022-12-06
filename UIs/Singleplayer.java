@@ -20,8 +20,6 @@ public class Singleplayer extends Stage {
         //Set title
         this.setTitle("Single player");
 
-        Player[] x = getNumPlayers(5);
-
         //Make the back of the deck
         ImageView deck = new ImageView();
         deck.setImage(new Image("./Card variations/Normal/card_back.png"));
@@ -33,9 +31,9 @@ public class Singleplayer extends Stage {
         this.show();
     }
 
-    private Player[] getNumPlayers(Integer num){
+    private Player[] getNumPlayers(){
 
-        return new Player[5];
+        throw new UnsupportedOperationException();
 
     }
 
