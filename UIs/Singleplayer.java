@@ -3,6 +3,7 @@ package UIs;
 import base.*;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
@@ -39,7 +40,7 @@ public class Singleplayer extends Stage {
         this.bot = bot;
         //Make the player
         this.players = getNumPlayers(bot, col);
-        Player human = this.players[0];
+        Human human = (Human) this.players[0];
 
 
         //Make the board
@@ -52,14 +53,10 @@ public class Singleplayer extends Stage {
             human.draw(board.getDrawDeck());
             i++;
         }
-        System.out.println(Arrays.toString(Pos.values()));
 
 
 
-        ImageView currentCard = new ImageView();
-        currentCard.setImage(new Image(board.getPlayedCard().getFrontSrc()));
-        y.getChildren().add(currentCard);
-        StackPane.setAlignment(currentCard, Pos.CENTER);
+
 
 
 
@@ -72,18 +69,43 @@ public class Singleplayer extends Stage {
                 humanHand1.setImage(new Image(human.getHand().get(j).getFrontSrc()));
                 y.getChildren().add(humanHand1);
                 StackPane.setAlignment(humanHand1, Pos.BOTTOM_LEFT);
-                y.getChildren().get(j + 1).setTranslateY(-20);
-                y.getChildren().get(j + 1).setTranslateX(131 * j);
+                y.getChildren().get(j).setTranslateY(-20);
+                y.getChildren().get(j).setTranslateX(131 * j);
+
+
 
 
             } else {
                 humanHand1.setImage(new Image(human.getHand().get(j).getFrontSrc()));
                 y.getChildren().add(humanHand1);
                 StackPane.setAlignment(humanHand1, Pos.BOTTOM_LEFT);
-                y.getChildren().get(j + 1).setTranslateX(131 * j);
+                y.getChildren().get(j).setTranslateX(131*j);
 
             }
+            // Button playCardButton = new Button();
+            //playCardButton.setGraphic(humanHand1);
+            //int finalJ = j;
+            //playCardButton.setOnAction(e -> {
+            //    human.playCard(human.getHand().get(finalJ));
+            //});
+            //y.getChildren().add(playCardButton);
+            //StackPane.setAlignment(playCardButton,Pos.TOP_RIGHT);
         }
+
+
+        for (int i1 = human.getHand().size(); i1 < 7+human.getHand().size(); i1++){
+            ImageView computerHand = new ImageView();
+            computerHand.setImage(new Image("card_back.png"));
+            y.getChildren().add(computerHand);
+            StackPane.setAlignment(computerHand, Pos.TOP_CENTER);
+            y.getChildren().get(i1).setTranslateX(131*(i1-7)-131*3);
+
+
+        }
+        ImageView currentCard = new ImageView();
+        currentCard.setImage(new Image(board.getPlayedCard().getFrontSrc()));
+        y.getChildren().add(currentCard);
+        StackPane.setAlignment(currentCard, Pos.CENTER);
 
 
 
