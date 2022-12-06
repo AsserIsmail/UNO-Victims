@@ -3,10 +3,15 @@ package UIs;
 import base.*;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.scene.image.Image;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
+
+import java.awt.*;
+import java.util.concurrent.Callable;
 
 
 public class Singleplayer extends Stage {
@@ -36,11 +41,25 @@ public class Singleplayer extends Stage {
         this.game = new Game(board);
 
 
+        //Place the discard deck
+        ImageView discardDeck = new ImageView();
+        discardDeck.setImage(new Image(this.board.getPlayedCard().getFrontSrc()));
+        y.getChildren().add(discardDeck);
+        StackPane.setAlignment(discardDeck, Pos.CENTER);
+
+
         //Make the back of the deck
         ImageView deck = new ImageView();
         deck.setImage(new Image("./Card variations/Normal/card_back.png"));
         y.getChildren().add(deck);
         StackPane.setAlignment(deck, Pos.BOTTOM_RIGHT);
+
+        //Show the score
+        Label score = new Label();
+        score.setText("Score: " + String.valueOf(this.board.getPlayer(0).getScore()));
+        score.setFont(new Font(32));
+        y.getChildren().add(score);
+        StackPane.setAlignment(score, Pos.TOP_LEFT);
 
         //Show everything
         this.setTitle("Single player");
@@ -48,6 +67,10 @@ public class Singleplayer extends Stage {
         this.show();
     }
 
+
+    /*
+    Creates the players.
+     */
     private Player[] getNumPlayers(String bots, String col){
 
         Player[] res = new Player[Integer.parseInt(bots) + 1];
@@ -59,6 +82,18 @@ public class Singleplayer extends Stage {
         }
 
         return res;
+    }
+
+    /*
+    Returns the extension for the colourblind option
+     */
+    private String getExtention(String mode){
+        if (mode.equals("High Contrast")) return "HC";
+        else if (mode.equals("Normal")) return "";
+        else if (mode.equals("High Contrast Signed")) return "SG-HC";
+        else if (mode.equals("Normal Signed")) return "SG";
+        else if (mode.equals("Black and White Signed")) return "SG-BK";
+        else return "";
     }
 
 }
