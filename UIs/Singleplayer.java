@@ -13,23 +13,27 @@ public class Singleplayer extends Stage {
 
     StackPane y = new StackPane(); // Stores all widgets
 
-    private String colourBlind; // Stores the colour blind
+    private String col; // Stores the colour blind
 
-    private Integer bots; // Stores the number of bots
+    private String bot; // Stores the number of bots
+
+    private Player[] players; // Stores the players
+
+    private Board board; // Stores the state of the board
+
+    private Game game; // Stores the state of the game
 
 
     Singleplayer(String col, String bot){
-        //Set title
-        this.setTitle("Single player");
-
+        // Set the private attributes
+        this.col = col;
+        this.bot = bot;
         //Make the player
-        Player[] players = getNumPlayers(bot, col);
-
+        this.players = getNumPlayers(bot, col);
         //Make the board
-        Board board = new Board(players);
-
+        this.board = new Board(players);
         //Make game
-        Game game = new Game(board);
+        this.game = new Game(board);
 
 
         //Make the back of the deck
@@ -39,6 +43,7 @@ public class Singleplayer extends Stage {
         StackPane.setAlignment(deck, Pos.BOTTOM_RIGHT);
 
         //Show everything
+        this.setTitle("Single player");
         this.setScene(new Scene(y, 1500, 700));
         this.show();
     }
