@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4bb8febd-416a-4bb3-a2a3-dd30f48250b7" name="Changes" comment="[DEV-1.3] modified player class, added human and computer&#10;class which extend the player. added a playertest class with one sanity test. modified the game class startgame method.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIs/Singleplayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIs/Singleplayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO-Victims/UIs/Singleplayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO-Victims/UIs/Singleplayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO-Victims/base/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO-Victims/base/Board.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO-Victims/base/Card.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO-Victims/base/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO-Victims/base/Player.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,44 +43,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/maziarmehrafza/Desktop/UNO-Victims&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Git.Branch.Popup.ShowAllRemotes": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "18",
+    "last_opened_file_path": "/Users/maziarmehrafza/Desktop/UNO-Victims",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PlayerTests.playerTest">
-    <configuration name="CardTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.MainMenu">
+    <configuration name="MainMenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UIs.MainMenu" />
       <module name="UNO-Victims" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;/Library/JavaFX/lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Tests.*" />
+          <option name="PATTERN" value="UIs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.CardTests" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -144,13 +148,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.MainMenu" />
+      <item itemvalue="JUnit.PlayerTests.playerTest" />
+      <item itemvalue="JUnit.CardTests.CardEqualsTest" />
+      <item itemvalue="JUnit.CardTests.CardImageTest" />
+      <item itemvalue="JUnit.CardTests.CardIsPlayable" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainMenu" />
         <item itemvalue="JUnit.PlayerTests.playerTest" />
         <item itemvalue="JUnit.CardTests.CardIsPlayable" />
         <item itemvalue="JUnit.CardTests.CardImageTest" />
         <item itemvalue="JUnit.CardTests.CardEqualsTest" />
-        <item itemvalue="JUnit.CardTests" />
       </list>
     </recent_temporary>
   </component>
