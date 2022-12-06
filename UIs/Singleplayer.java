@@ -65,35 +65,35 @@ public class Singleplayer extends Stage {
         for (int j = 0; j < human.getHand().size();j++) {
 
             ImageView humanHand1 = new ImageView();
+            humanHand1.setImage(new Image(human.getHand().get(j).getFrontSrc()));
+
+
             if (human.getHand().get(j).isPlayable(board.getPlayedCard())) {
-                humanHand1.setImage(new Image(human.getHand().get(j).getFrontSrc()));
-                y.getChildren().add(humanHand1);
-                StackPane.setAlignment(humanHand1, Pos.BOTTOM_LEFT);
+                Button playCardButton = new Button();
+                playCardButton.setGraphic(humanHand1);
+                int finalJ = j;
+                playCardButton.setOnAction(e -> {
+                    //execute card;
+                });
+                y.getChildren().add(playCardButton);
+
+                StackPane.setAlignment(playCardButton, Pos.BOTTOM_LEFT);
+                y.getChildren().get(j).setTranslateX(131*j);
                 y.getChildren().get(j).setTranslateY(-20);
-                y.getChildren().get(j).setTranslateX(131 * j);
 
 
-
-
-            } else {
-                humanHand1.setImage(new Image(human.getHand().get(j).getFrontSrc()));
+            }else{
                 y.getChildren().add(humanHand1);
                 StackPane.setAlignment(humanHand1, Pos.BOTTOM_LEFT);
                 y.getChildren().get(j).setTranslateX(131*j);
 
             }
-            // Button playCardButton = new Button();
-            //playCardButton.setGraphic(humanHand1);
-            //int finalJ = j;
-            //playCardButton.setOnAction(e -> {
-            //    human.playCard(human.getHand().get(finalJ));
-            //});
-            //y.getChildren().add(playCardButton);
-            //StackPane.setAlignment(playCardButton,Pos.TOP_RIGHT);
+
+
         }
 
 
-        for (int i1 = human.getHand().size(); i1 < 7+human.getHand().size(); i1++){
+        for (int i1 = human.getHand().size(); i1 < 7+human.getHand().size(); i1++){ //change with computer hand size
             ImageView computerHand = new ImageView();
             computerHand.setImage(new Image("card_back.png"));
             y.getChildren().add(computerHand);
@@ -122,8 +122,14 @@ public class Singleplayer extends Stage {
         //Make the back of the deck
         ImageView deck = new ImageView();
         deck.setImage(new Image("./Card variations/Normal/card_back.png"));
-        y.getChildren().add(deck);
-        StackPane.setAlignment(deck, Pos.BOTTOM_RIGHT);
+        Button drawDeckButton = new Button();
+        drawDeckButton.setGraphic(deck);
+
+        drawDeckButton.setOnAction(e -> {
+            //execute card;
+        });
+        y.getChildren().add(drawDeckButton);
+        StackPane.setAlignment(drawDeckButton, Pos.BOTTOM_RIGHT);
 
         //Show the score
         Label score = new Label();
