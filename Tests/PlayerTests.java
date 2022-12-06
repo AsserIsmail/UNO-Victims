@@ -20,7 +20,7 @@ public class PlayerTests {
     public void dealTest(){
         Computer bob = new Computer("bob");
         Human p1 = new Human("Norton", "null");
-        Board board = new Board(new Player[]{p1, bob});
+        Board board = new Board(new Player[]{p1, bob}, "");
         p1.deal(board.getDrawDeck());
         bob.deal(board.getDrawDeck());
         assertEquals(7, bob.getHand().size());

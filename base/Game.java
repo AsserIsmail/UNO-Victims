@@ -1,4 +1,5 @@
 package base;
+import base.Cards.AbstractCard;
 import base.Cards.Card;
 
 import java.util.Scanner;
@@ -12,7 +13,7 @@ public class Game implements State {
 
     public String currColour; // Current colour of the game
 
-    public Card currCard; // Current card on the board
+    public AbstractCard currCard; // Current card on the board
 
     public boolean gameOn;
 
@@ -40,7 +41,7 @@ public class Game implements State {
      */
     @Override
     public void executeCard(Card c, Player p) {
-        Card prevCard = null;
+        AbstractCard prevCard = null;
         if (!this.board.getPlayedCard().getSymbol().equals("replicate")) {
             prevCard = this.board.getPlayedCard();
             this.board.getDiscardDeck().push(c);

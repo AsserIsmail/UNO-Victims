@@ -2,6 +2,7 @@ package Tests;
 
 
 import base.Board;
+import base.Cards.AbstractCard;
 import base.Cards.Card;
 import base.Human;
 import base.Player;
@@ -21,7 +22,7 @@ public class BoardTests {
         Player p1 = new Human("Rob", "Normal");
         Player p2 = new Human("Larry", "Normal");
         Player p3 = new Human("Barry", "Normal");
-        Board board = new Board(new Player[]{p, p1, p2, p3});
+        Board board = new Board(new Player[]{p, p1, p2, p3}, "");
 
         assertEquals(board.getCurrentPlayer(), p);
         assertEquals(board.getDirection(), 1);
@@ -36,7 +37,7 @@ public class BoardTests {
         Player p1 = new Human("Rob", "Normal");
         Player p2 = new Human("Larry", "Normal");
         Player p3 = new Human("Barry", "Normal");
-        Board board = new Board(new Player[]{p, p1, p2, p3});
+        Board board = new Board(new Player[]{p, p1, p2, p3}, "");
 
 
         ArrayList result1 = new ArrayList<>(List.of("blue 0", "blue 1", "blue 1", "blue 2", "blue 2",
@@ -57,7 +58,7 @@ public class BoardTests {
 
 
 
-        ArrayList<Card> result = new ArrayList<>(board.getDrawDeck());
+        ArrayList<AbstractCard> result = new ArrayList<>(board.getDrawDeck());
 
 
         assertEquals(result.size(), result1.size()-1);

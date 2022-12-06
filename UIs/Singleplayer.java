@@ -36,7 +36,7 @@ public class Singleplayer extends Stage {
         //Make the player
         this.players = getNumPlayers(bot, col);
         //Make the board
-        this.board = new Board(players);
+        this.board = new Board(players, this.getExtention(this.col));
         //Make game
         this.game = new Game(board);
 

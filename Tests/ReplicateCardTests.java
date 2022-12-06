@@ -17,7 +17,7 @@ public class ReplicateCardTests {
         Player p1 = new Human("Rob", "Normal");
         Player p2 = new Human("Larry", "Normal");
         Player p3 = new Human("Barry", "Normal");
-        Board board = new Board(new Player[]{p, p1, p2, p3});
+        Board board = new Board(new Player[]{p, p1, p2, p3}, "");
         for (int drawn = 0 ; drawn < 7 ; drawn++){
             p.draw(board.getDrawDeck());
             p1.draw(board.getDrawDeck());
