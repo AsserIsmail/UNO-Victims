@@ -1,8 +1,6 @@
 package UIs;
 
-import base.Board;
-import base.Game;
-import base.Player;
+import base.*;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
@@ -15,10 +13,24 @@ public class Singleplayer extends Stage {
 
     StackPane y = new StackPane(); // Stores all widgets
 
+    private String colourBlind; // Stores the colour blind
+
+    private Integer bots; // Stores the number of bots
+
 
     Singleplayer(String col, String bot){
         //Set title
         this.setTitle("Single player");
+
+        //Make the player
+        Player[] players = getNumPlayers(bot, col);
+
+        //Make the board
+        Board board = new Board(players);
+
+        //Make game
+        Game game = new Game(board);
+
 
         //Make the back of the deck
         ImageView deck = new ImageView();
@@ -31,10 +43,17 @@ public class Singleplayer extends Stage {
         this.show();
     }
 
-    private Player[] getNumPlayers(){
+    private Player[] getNumPlayers(String bots, String col){
 
-        throw new UnsupportedOperationException();
+        Player[] res = new Player[Integer.parseInt(bots) + 1];
 
+        res[0] = new Human("p1", col);
+
+        for (int i = 1; i < Integer.parseInt(bots); i++){
+            res[i] = new Computer("C" + i);
+        }
+
+        return res;
     }
 
 }
