@@ -221,7 +221,7 @@ public class Board {
     /**
      * Sets the played card.
      */
-    public void setPlayedCard(Card card) {
+    public void setPlayedCard(AbstractCard card) {
         this.playedCard = card;
     }
 

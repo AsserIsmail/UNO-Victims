@@ -39,86 +39,86 @@ public class Game implements State {
      * @param c is a Card object that has been played
      * @param p is a Player object that has played the card
      */
-    @Override
-    public void executeCard(Card c, Player p) {
-        AbstractCard prevCard = null;
-        if (!this.board.getPlayedCard().getSymbol().equals("replicate")) {
-            prevCard = this.board.getPlayedCard();
-            this.board.getDiscardDeck().push(c);
-        }
-        this.currCard = c;
-        this.currColour = c.getColour();
-        this.board.setPlayedCard(this.currCard);
-        p.giveScore(this.currCard.getPoint());
-
-        if (this.currCard.getSymbol().equals("picker")) {
-            // Go to the next player, draw to cards, go to the next player again. implementation
-            this.board.goToNextPlayer();
-            p.draw(this.board.getDrawDeck());
-            p.draw(this.board.getDrawDeck());
-            this.board.goToNextPlayer();
-        } else if (this.currCard.getSymbol().equals("skip")) {
-            // Skip the first player
-            this.board.goToNextPlayer();
-            this.board.goToNextPlayer();
-        } else if (this.currCard.getSymbol().equals("reverse")) {
-            // Change the direction in board and goes to the next player
-            this.board.changeDirection();
-            this.board.goToNextPlayer();
-        } else if (this.currCard.getSymbol().equals("color_changer")) {
-            // Print options
-            System.out.println("Enter colour number:");
-            System.out.println("Blue -> 1");
-            System.out.println("Red -> 2");
-            System.out.println("Yellow -> 3");
-            System.out.println("Green -> 4");
-
-            // Digest choice
-            Scanner newCol = new Scanner(System.in);
-            int choice = newCol.nextInt();
-            if (choice == 1) this.currColour = "blue";
-            else if (choice == 2) this.currColour = "red";
-            else if (choice == 3) this.currColour = "yellow";
-            else if (choice == 4) this.currColour = "green";
-
-            // Change the current colour info in other classes
-            this.board.setCurrCol(this.currColour);
-            this.board.goToNextPlayer();
-
-        } else if (this.currCard.getSymbol().equals("pick_four")) {
-            // Print options
-            System.out.println("Enter colour number:");
-            System.out.println("Blue -> 1");
-            System.out.println("Red -> 2");
-            System.out.println("Yellow -> 3");
-            System.out.println("Green -> 4");
-
-            // Digest choice
-            Scanner newCol = new Scanner(System.in);
-            int choice = newCol.nextInt();
-            if (choice == 1) this.currColour = "blue";
-            else if (choice == 2) this.currColour = "red";
-            else if (choice == 3) this.currColour = "yellow";
-            else if (choice == 4) this.currColour = "green";
-
-            // Change the current colour info in other classes
-            this.board.setCurrCol(this.currColour);
-            this.board.goToNextPlayer();
-
-            // Pick the extra 4 cards.
-            p.draw(this.board.getDrawDeck());
-            p.draw(this.board.getDrawDeck());
-            p.draw(this.board.getDrawDeck());
-            p.draw(this.board.getDrawDeck());
-
-        }
-        else if (this.currCard.getSymbol().equals("replicate")) {
-            executeCard(prevCard, p);
-
-        } else {
-            this.board.goToNextPlayer();
-        }
-    }
+//    @Override
+//    public void executeCard(Card c, Player p) {
+//        AbstractCard prevCard = null;
+//        if (!this.board.getPlayedCard().getSymbol().equals("replicate")) {
+//            prevCard = this.board.getPlayedCard();
+//            this.board.getDiscardDeck().push(c);
+//        }
+//        this.currCard = c;
+//        this.currColour = c.getColour();
+//        this.board.setPlayedCard(this.currCard);
+//        p.giveScore(this.currCard.getPoint());
+//
+//        if (this.currCard.getSymbol().equals("picker")) {
+//            // Go to the next player, draw to cards, go to the next player again. implementation
+//            this.board.goToNextPlayer();
+//            p.draw(this.board.getDrawDeck());
+//            p.draw(this.board.getDrawDeck());
+//            this.board.goToNextPlayer();
+//        } else if (this.currCard.getSymbol().equals("skip")) {
+//            // Skip the first player
+//            this.board.goToNextPlayer();
+//            this.board.goToNextPlayer();
+//        } else if (this.currCard.getSymbol().equals("reverse")) {
+//            // Change the direction in board and goes to the next player
+//            this.board.changeDirection();
+//            this.board.goToNextPlayer();
+//        } else if (this.currCard.getSymbol().equals("color_changer")) {
+//            // Print options
+//            System.out.println("Enter colour number:");
+//            System.out.println("Blue -> 1");
+//            System.out.println("Red -> 2");
+//            System.out.println("Yellow -> 3");
+//            System.out.println("Green -> 4");
+//
+//            // Digest choice
+//            Scanner newCol = new Scanner(System.in);
+//            int choice = newCol.nextInt();
+//            if (choice == 1) this.currColour = "blue";
+//            else if (choice == 2) this.currColour = "red";
+//            else if (choice == 3) this.currColour = "yellow";
+//            else if (choice == 4) this.currColour = "green";
+//
+//            // Change the current colour info in other classes
+//            this.board.setCurrCol(this.currColour);
+//            this.board.goToNextPlayer();
+//
+//        } else if (this.currCard.getSymbol().equals("pick_four")) {
+//            // Print options
+//            System.out.println("Enter colour number:");
+//            System.out.println("Blue -> 1");
+//            System.out.println("Red -> 2");
+//            System.out.println("Yellow -> 3");
+//            System.out.println("Green -> 4");
+//
+//            // Digest choice
+//            Scanner newCol = new Scanner(System.in);
+//            int choice = newCol.nextInt();
+//            if (choice == 1) this.currColour = "blue";
+//            else if (choice == 2) this.currColour = "red";
+//            else if (choice == 3) this.currColour = "yellow";
+//            else if (choice == 4) this.currColour = "green";
+//
+//            // Change the current colour info in other classes
+//            this.board.setCurrCol(this.currColour);
+//            this.board.goToNextPlayer();
+//
+//            // Pick the extra 4 cards.
+//            p.draw(this.board.getDrawDeck());
+//            p.draw(this.board.getDrawDeck());
+//            p.draw(this.board.getDrawDeck());
+//            p.draw(this.board.getDrawDeck());
+//
+//        }
+//        else if (this.currCard.getSymbol().equals("replicate")) {
+//            executeCard(prevCard, p);
+//
+//        } else {
+//            this.board.goToNextPlayer();
+//        }
+//    }
 
     /**
      * When a player calls uno and has only one card left in their hand
@@ -133,11 +133,11 @@ public class Game implements State {
     /*
     Starts the game
      */
-    public void startGame(){
-        this.gameOn = true;
-        for(Player p: this.board.getPlayers()) p.deal(board.getDrawDeck());
-        // this.play();
-    }
+//    public void startGame(){
+//        this.gameOn = true;
+//        for(Player p: this.board.getPlayers()) p.deal(board.getDrawDeck());
+//        // this.play();
+//    }
 
     /**
      * Play the game. Where the game actually happens
@@ -171,4 +171,8 @@ public class Game implements State {
         this.gameOn = false;
     }
 
+    @Override
+    public void executeCard(Card c, Player p) {
+
+    }
 }
