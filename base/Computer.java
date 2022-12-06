@@ -1,5 +1,6 @@
 package base;
 
+import base.Cards.AbstractCard;
 import base.Cards.Card;
 
 import java.util.Optional;
@@ -20,9 +21,9 @@ public class Computer extends Player{
      * returns a random card from the computers playable cards
      * @return a card
      */
-    public Card playRandom(){
+    public AbstractCard playRandom(){
         Random rand = new Random();
-        Card randomC = this.getACards().get(rand.nextInt(this.getACards().size()));
+        AbstractCard randomC = this.getACards().get(rand.nextInt(this.getACards().size()));
         this.getHand().remove(randomC);
         return randomC;
     }

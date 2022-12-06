@@ -11,6 +11,7 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.awt.*;
+import java.util.Arrays;
 import java.util.concurrent.Callable;
 
 
@@ -24,6 +25,9 @@ public class Singleplayer extends Stage {
 
     private Player[] players; // Stores the players
 
+
+
+
     private Board board; // Stores the state of the board
 
     private Game game; // Stores the state of the game
@@ -35,10 +39,55 @@ public class Singleplayer extends Stage {
         this.bot = bot;
         //Make the player
         this.players = getNumPlayers(bot, col);
+        Player human = this.players[0];
+
+
         //Make the board
         this.board = new Board(players, this.getExtention(this.col));
         //Make game
         this.game = new Game(board);
+
+        int i = 0;
+        while (i < 7){
+            human.draw(board.getDrawDeck());
+            i++;
+        }
+        System.out.println(Arrays.toString(Pos.values()));
+
+
+
+        ImageView currentCard = new ImageView();
+        currentCard.setImage(new Image(board.getPlayedCard().getFrontSrc()));
+        y.getChildren().add(currentCard);
+        StackPane.setAlignment(currentCard, Pos.CENTER);
+
+
+
+
+
+        for (int j = 0; j < human.getHand().size();j++) {
+
+            ImageView humanHand1 = new ImageView();
+            if (human.getHand().get(j).isPlayable(board.getPlayedCard())) {
+                humanHand1.setImage(new Image(human.getHand().get(j).getFrontSrc()));
+                y.getChildren().add(humanHand1);
+                StackPane.setAlignment(humanHand1, Pos.BOTTOM_LEFT);
+                y.getChildren().get(j + 1).setTranslateY(-20);
+                y.getChildren().get(j + 1).setTranslateX(131 * j);
+
+
+            } else {
+                humanHand1.setImage(new Image(human.getHand().get(j).getFrontSrc()));
+                y.getChildren().add(humanHand1);
+                StackPane.setAlignment(humanHand1, Pos.BOTTOM_LEFT);
+                y.getChildren().get(j + 1).setTranslateX(131 * j);
+
+            }
+        }
+
+
+
+
 
 
         //Place the discard deck
