@@ -99,7 +99,7 @@ public class Card implements AbstractCard{
     * */
     @Override
     public boolean isPlayable(AbstractCard c){
-        if (c.getColour().equals(this.colour) || this.getColour().equals("wild")){
+        if (c.getColour().equals(this.colour) || this.getColour().equals("wild")||c.getColour().equals("wild")){
             return true;
         } else return c.getSymbol().equals(this.symbol);
 

@@ -5,8 +5,13 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
-import javafx.scene.layout.StackPane;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.*;
+import javafx.scene.paint.*;
 import javafx.stage.Stage;
+
+import java.util.Objects;
 
 public class MainMenu extends Application {
 
@@ -63,13 +68,26 @@ public class MainMenu extends Application {
         //Putting it all together
         StackPane base = new StackPane();
         base.getChildren().add(playButton);
+        StackPane.setAlignment(playButton, Pos.CENTER);
         base.getChildren().add(cBots);
-        StackPane.setAlignment(cBots, Pos.CENTER_RIGHT);
+        StackPane.setAlignment(cBots, Pos.CENTER);
+        base.getChildren().get(1).setTranslateY(30);
         base.getChildren().add(cColour);
-        StackPane.setAlignment(cColour, Pos.BOTTOM_CENTER);
+        StackPane.setAlignment(cColour, Pos.CENTER);
+        base.getChildren().get(2).setTranslateY(60);
 
         //Making the scene
-        Scene scene = new Scene(base, 242, 100);
+        Scene scene = new Scene(base, 350, 350);
+        ImageView background = new ImageView();
+        background.setImage(new Image("UIs/UNO_Logo.png"));
+        BackgroundImage bImg = new BackgroundImage(background.getImage(),
+                BackgroundRepeat.NO_REPEAT,
+                BackgroundRepeat.NO_REPEAT,
+                BackgroundPosition.CENTER,
+                BackgroundSize.DEFAULT);
+        Background bGround = new Background(bImg);
+        base.setBackground(bGround);
+
         stage.setScene(scene);
         stage.show();
     }
