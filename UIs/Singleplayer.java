@@ -88,7 +88,7 @@ public class Singleplayer extends Stage {
     Creates the players.
      */
     private Player[] getNumPlayers(String bots, String col){
-
+        if (bots.equals("Bots")) bots = "1";
         Player[] res = new Player[Integer.parseInt(bots) + 1];
 
         res[0] = new Human("p1", col);
