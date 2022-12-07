@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bb8febd-416a-4bb3-a2a3-dd30f48250b7" name="Changes" comment="[DEV-1.3] modified player class, added human and computer&#10;class which extend the player. added a playertest class with one sanity test. modified the game class startgame method.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="4bb8febd-416a-4bb3-a2a3-dd30f48250b7" name="Changes" comment="Card class comments pt.1">
+      <change beforePath="$PROJECT_DIR$/base/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,13 +23,17 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev-uno-merge-testing" />
+        <entry key="$PROJECT_DIR$" value="dev-uno" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2Ggr5P2Pfg70uaJrFlwdnwQWY0x" />
   <component name="ProjectLevelVcsManager">
@@ -43,18 +48,16 @@
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
     &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
     &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
     &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/maziarmehrafza/Desktop/UNO-Victims&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
@@ -63,8 +66,33 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.PlayerTests.playerTest">
+  <component name="RunManager" selected="Application.MainMenu">
+    <configuration name="MainMenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UIs.MainMenu" />
+      <module name="UNO-Victims" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;/Library/JavaFX/lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UIs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UNO" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UNO" />
+      <module name="UNO-Victims" />
+      <option name="PROGRAM_PARAMETERS" value="--module-path &quot;/Library/JavaFX/lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CardTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UNO-Victims" />
       <extension name="coverage">
@@ -75,6 +103,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.CardTests" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -128,25 +157,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlayerTests.playerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="UNO-Victims" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.PlayerTests" />
-      <option name="METHOD_NAME" value="playerTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="Application.UNO" />
+      <item itemvalue="Application.MainMenu" />
+      <item itemvalue="JUnit.CardTests" />
+      <item itemvalue="JUnit.CardTests.CardEqualsTest" />
+      <item itemvalue="JUnit.CardTests.CardImageTest" />
+      <item itemvalue="JUnit.CardTests.CardIsPlayable" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PlayerTests.playerTest" />
+        <item itemvalue="Application.MainMenu" />
         <item itemvalue="JUnit.CardTests.CardIsPlayable" />
         <item itemvalue="JUnit.CardTests.CardImageTest" />
         <item itemvalue="JUnit.CardTests.CardEqualsTest" />
@@ -162,9 +183,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666820883421</updated>
-      <workItem from="1670011901233" duration="611000" />
-      <workItem from="1670113739614" duration="32000" />
-      <workItem from="1670113807010" duration="10869000" />
     </task>
     <task id="LOCAL-00001" summary="Card class outline">
       <created>1669574426251</created>
@@ -173,18 +191,8 @@
       <option name="project" value="LOCAL" />
       <updated>1669574426251</updated>
     </task>
-    <task id="LOCAL-00002" summary="[DEV-1.3] modified player class, added human and computer&#10;class which extend the player. added a playertest class with one sanity test. modified the game class startgame method.">
-      <created>1670187530923</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1670187530923</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -197,7 +205,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="dev-uno" />
+                        <option value="origin/dev-uno-UI" />
                       </list>
                     </value>
                   </entry>
@@ -212,7 +220,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Card class outline" />
-    <MESSAGE value="[DEV-1.3] modified player class, added human and computer&#10;class which extend the player. added a playertest class with one sanity test. modified the game class startgame method." />
-    <option name="LAST_COMMIT_MESSAGE" value="[DEV-1.3] modified player class, added human and computer&#10;class which extend the player. added a playertest class with one sanity test. modified the game class startgame method." />
+    <option name="LAST_COMMIT_MESSAGE" value="Card class outline" />
   </component>
 </project>

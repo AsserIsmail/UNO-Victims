@@ -1,5 +1,6 @@
 package base;
 
+import base.Cards.AbstractCard;
 import base.Cards.Card;
 
 public class Human extends Player{
@@ -29,8 +30,8 @@ public class Human extends Player{
      * returns whether a player can play the specified card or not and removes from the players hand if it can be played
      * @return true if the selected card is playable
      */
-    public boolean playCard(Card selectedCard){
-        for(Card c:this.getACards()){
+    public boolean playCard(AbstractCard selectedCard){
+        for(AbstractCard c:this.getACards()){
             if(c.isPlayable(selectedCard)){
                 this.getHand().remove(c);
                 return true;

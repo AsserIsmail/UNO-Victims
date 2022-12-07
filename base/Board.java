@@ -1,6 +1,11 @@
 package base;
 
+import base.Cards.AbstractCard;
 import base.Cards.Card;
+import base.ColourblindCards.HCCard;
+import base.ColourblindCards.SGBKCard;
+import base.ColourblindCards.SGCard;
+import base.ColourblindCards.SGHCCard;
 import base.DCLL.DCL;
 
 import java.util.Collections;
@@ -12,13 +17,13 @@ import java.util.Timer;
  * Contains the deck, discard pile, and players.
  */
 public class Board {
-    private Stack<Card> drawDeck; // the deck of cards
+    private Stack<AbstractCard> drawDeck; // the deck of cards
 
-    private Stack<Card> copyDeck; // a copy of the drawDeck
+    private Stack<AbstractCard> copyDeck; // a copy of the drawDeck
 
-    private Stack<Card> discardDeck; // the discard pile
+    private Stack<AbstractCard> discardDeck; // the discard pile
 
-    private Card playedCard; // the card that is currently on the board
+    private AbstractCard playedCard; // the card that is currently on the board
 
     private Player[] players; // the players in the game
 
@@ -43,7 +48,7 @@ public class Board {
      * Board constructor.
      * @param allPlayers    the players in the game
      */
-    public Board(Player[] allPlayers) {
+    public Board(Player[] allPlayers, String cb) {
         this.numPlayers = allPlayers.length;
         this.players = allPlayers;
         this.discardDeck = new Stack<>();
@@ -73,8 +78,11 @@ public class Board {
                 }
             }
         }
+
+        if (!(cb.equals(""))) this.drawDeck = this.wrapper(cb);
+
         Collections.shuffle(this.drawDeck);
-        Card placeHolder = this.drawDeck.pop();
+        AbstractCard placeHolder = this.drawDeck.pop();
         while (true) {
             if (placeHolder.getColour().equals("wild")) {
                 this.discardDeck.push(placeHolder);
@@ -85,7 +93,36 @@ public class Board {
                 break;
             }
         }
-        this.copyDeck = (Stack<Card>) this.drawDeck.clone();
+        this.copyDeck = (Stack<AbstractCard>) this.drawDeck.clone();
+    }
+
+    /*
+    Wraps the cards for colourblind.
+     */
+    private Stack<AbstractCard> wrapper(String cb){
+
+        Stack<AbstractCard> newDeck = new Stack<>();
+
+        if (cb.equals("HC")){
+            while (this.drawDeck.size() != 0){
+                newDeck.push(new HCCard(this.drawDeck.pop()));
+            }
+        } else if (cb.equals("SG-HC")) {
+            while (this.drawDeck.size() != 0){
+                newDeck.push(new SGHCCard(this.drawDeck.pop()));
+            }
+        } else if (cb.equals("SG")) {
+            while (this.drawDeck.size() != 0){
+                newDeck.push(new SGCard(this.drawDeck.pop()));
+            }
+        } else if (cb.equals("SG-BK")) {
+            while (this.drawDeck.size() != 0){
+                newDeck.push(new SGBKCard(this.drawDeck.pop()));
+            }
+        }
+
+        return newDeck;
+
     }
 
     /**
@@ -161,7 +198,7 @@ public class Board {
      * Returns the draw deck.
      * @return  the draw deck
      */
-    public Stack<Card> getDrawDeck() {
+    public Stack<AbstractCard> getDrawDeck() {
         return this.drawDeck;
     }
 
@@ -169,7 +206,7 @@ public class Board {
      * Returns the discard deck.
      * @return  the discard deck
      */
-    public Stack<Card> getDiscardDeck() {
+    public Stack<AbstractCard> getDiscardDeck() {
         return this.discardDeck;
     }
 
@@ -177,14 +214,14 @@ public class Board {
      * Returns the played card.
      * @return  the played card
      */
-    public Card getPlayedCard() {
+    public AbstractCard getPlayedCard() {
         return this.playedCard;
     }
 
     /**
      * Sets the played card.
      */
-    public void setPlayedCard(Card card) {
+    public void setPlayedCard(AbstractCard card) {
         this.playedCard = card;
     }
 
