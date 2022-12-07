@@ -2,12 +2,13 @@ package base;
 import base.Cards.AbstractCard;
 import base.Cards.Card;
 
+import java.io.Serializable;
 import java. util. *;
 /* The Player Class. Keeps track of information associated with a player*/
 
 import java.util.ArrayList;
 
-public class Player {
+public class Player implements Serializable {
     private String name; // name of player
 
     private int score; // current score of player

@@ -7,12 +7,13 @@ import java.util.Optional;
 import java.util.Random;
 
 public class Computer extends Player{
+    private static Computer c;
     /**
      * Constructor for a new Uno Bot
      *
      * @param playerName name
      */
-    public Computer(String playerName) {
+    private Computer(String playerName) {
         super(playerName);
     }
 
@@ -26,6 +27,12 @@ public class Computer extends Player{
         AbstractCard randomC = this.getACards().get(rand.nextInt(this.getACards().size()));
         this.getHand().remove(randomC);
         return randomC;
+    }
+    public static Computer getC(){
+        if(c==null){
+            c = new Computer("c1");
+        }
+        return c;
     }
 
 }
