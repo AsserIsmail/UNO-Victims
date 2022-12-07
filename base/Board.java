@@ -90,6 +90,7 @@ public class Board {
             } else {
                 this.playedCard = placeHolder;
                 this.discardDeck.push(this.playedCard);
+                this.currentCol = placeHolder.getColour();
                 break;
             }
         }

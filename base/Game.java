@@ -4,6 +4,7 @@ import base.Cards.AbstractCard;
 import base.Cards.Card;
 import javafx.scene.control.ChoiceBox;
 
+import java.util.Random;
 import java.util.Scanner;
 /*
 A class representing an uno game
@@ -43,6 +44,11 @@ public class Game implements State {
      */
     @Override
     public void executeCard(AbstractCard c, Player p) {
+
+        // System.out.println("Bots hand: " + p.getHand());
+
+        System.out.println(p.getName() + " played " + c.getFrontSrc());
+
         board.setCurrCol(c.getColour());
 
         AbstractCard prevCard = null;
@@ -58,62 +64,96 @@ public class Game implements State {
         if (this.currCard.getSymbol().equals("picker")) {
             // Go to the next player, draw to cards, go to the next player again. implementation
             this.board.goToNextPlayer();
-            p.draw(this.board.getDrawDeck());
-            p.draw(this.board.getDrawDeck());
+
+            // Pick the extra 2 cards.
+            this.board.getCurrentPlayer().draw(this.board.getDrawDeck());
+            this.board.getCurrentPlayer().draw(this.board.getDrawDeck());
+
             this.board.goToNextPlayer();
+
         } else if (this.currCard.getSymbol().equals("skip")) {
             // Skip the first player
             this.board.goToNextPlayer();
             this.board.goToNextPlayer();
+
         } else if (this.currCard.getSymbol().equals("reverse")) {
             // Change the direction in board and goes to the next player
             this.board.changeDirection();
             this.board.goToNextPlayer();
+
         } else if (this.currCard.getSymbol().equals("color_changer")) {
             // Print options
-            System.out.println("Enter colour number:");
-            System.out.println("Blue -> 1");
-            System.out.println("Red -> 2");
-            System.out.println("Yellow -> 3");
-            System.out.println("Green -> 4");
+            if (p instanceof Human){
+                // Print options
+                System.out.println("Enter colour number:");
+                System.out.println("Blue -> 1");
+                System.out.println("Red -> 2");
+                System.out.println("Yellow -> 3");
+                System.out.println("Green -> 4");
 
-            // Digest choice
-            Scanner newCol = new Scanner(System.in);
-            int choice = newCol.nextInt();
-            if (choice == 1) this.currColour = "blue";
-            else if (choice == 2) this.currColour = "red";
-            else if (choice == 3) this.currColour = "yellow";
-            else if (choice == 4) this.currColour = "green";
+                // Digest choice
+                Scanner newCol = new Scanner(System.in);
+                int choice = newCol.nextInt();
+                if (choice == 1)      this.board.setCurrCol("blue");
+                else if (choice == 2) this.board.setCurrCol("red");
+                else if (choice == 3) this.board.setCurrCol("yellow");
+                else if (choice == 4) this.board.setCurrCol("green");
+
+            } else {
+
+                Random rand = new Random();
+                int cComp = rand.nextInt(4);
+
+                if (cComp == 0) this.board.setCurrCol("blue");
+                else if (cComp == 1) this.board.setCurrCol("red");
+                else if (cComp == 2) this.board.setCurrCol("yellow");
+                else this.board.setCurrCol("green");
+                System.out.println("The bot chose: " + this.board.getCurrentCol());
+            }
 
             // Change the current colour info in other classes
-            this.board.setCurrCol(this.currColour);
+            // this.board.setCurrCol(this.currColour);
             this.board.goToNextPlayer();
 
         } else if (this.currCard.getSymbol().equals("pick_four")) {
-            // Print options
-            System.out.println("Enter colour number:");
-            System.out.println("Blue -> 1");
-            System.out.println("Red -> 2");
-            System.out.println("Yellow -> 3");
-            System.out.println("Green -> 4");
 
-            // Digest choice
-            Scanner newCol = new Scanner(System.in);
-            int choice = newCol.nextInt();
-            if (choice == 1) this.currColour = "blue";
-            else if (choice == 2) this.currColour = "red";
-            else if (choice == 3) this.currColour = "yellow";
-            else if (choice == 4) this.currColour = "green";
+            if (p instanceof Human){
+                // Print options
+                System.out.println("Enter colour number:");
+                System.out.println("Blue -> 1");
+                System.out.println("Red -> 2");
+                System.out.println("Yellow -> 3");
+                System.out.println("Green -> 4");
 
-            // Change the current colour info in other classes
-            this.board.setCurrCol(this.currColour);
+                // Digest choice
+                Scanner newCol = new Scanner(System.in);
+                int choice = newCol.nextInt();
+                if (choice == 1)      this.board.setCurrCol("blue");
+                else if (choice == 2) this.board.setCurrCol("red");
+                else if (choice == 3) this.board.setCurrCol("yellow");
+                else if (choice == 4) this.board.setCurrCol("green");
+
+            } else {
+
+                Random rand = new Random();
+                int cComp = rand.nextInt(4);
+
+                if (cComp == 0) this.board.setCurrCol("blue");
+                else if (cComp == 1) this.board.setCurrCol("red");
+                else if (cComp == 2) this.board.setCurrCol("yellow");
+                else this.board.setCurrCol("green");
+                System.out.println("The bot chose: " + this.board.getCurrentCol());
+            }
+
+            System.out.println(this.board.getCurrentCol());
+
             this.board.goToNextPlayer();
 
             // Pick the extra 4 cards.
-            p.draw(this.board.getDrawDeck());
-            p.draw(this.board.getDrawDeck());
-            p.draw(this.board.getDrawDeck());
-            p.draw(this.board.getDrawDeck());
+            this.board.getCurrentPlayer().draw(this.board.getDrawDeck());
+            this.board.getCurrentPlayer().draw(this.board.getDrawDeck());
+            this.board.getCurrentPlayer().draw(this.board.getDrawDeck());
+            this.board.getCurrentPlayer().draw(this.board.getDrawDeck());
 
         } else if (this.currCard.getSymbol().equals("replicate")) {
             executeCard(prevCard, p);

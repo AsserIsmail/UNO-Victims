@@ -76,9 +76,9 @@ public class Player {
      * iterates through the hand of the player and adds any playable cards to availableCards by comparing each card to the
      * current card in play
      */
-    public void setAvailableCards(AbstractCard currentCard){
+    public void setAvailableCards(AbstractCard currentCard, String cCol){
         for(AbstractCard c:hand){
-            if(c.isPlayable(currentCard) /* || c.coulour.equals(board.currColour))*/) this.availableCards.add(c);
+            if(c.isPlayable(currentCard) || c.getSymbol().equals(cCol)) this.availableCards.add(c);
         }
     }
 

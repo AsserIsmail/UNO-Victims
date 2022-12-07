@@ -2,6 +2,7 @@ package UIs;
 
 import base.*;
 import base.Cards.AbstractCard;
+import base.Cards.Card;
 import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -117,8 +118,7 @@ public class Singleplayer extends Stage {
 
 
     private void drawBoard(Human human, Computer computer){
-
-        if (human.getHand().size() == 0 || computer.getHand().size() ==0 || human.getScore() >= 500 ){
+        if (human.getHand().size() == 0 || computer.getHand().size() == 0 || human.getScore() >= 500 ){
             game.endGame();
 
             if (human.getHand().size() == 0 || human.getScore() >= 500){
@@ -140,7 +140,7 @@ public class Singleplayer extends Stage {
 
                 ImageView humanHand1 = new ImageView();
                 humanHand1.setImage(new Image(human.getHand().get(j).getFrontSrc()));
-                board.setCurrCol(board.getPlayedCard().getColour());
+
 
 
                 if (human.getHand().get(j).isPlayable(board.getPlayedCard()) || board.getCurrentCol().equals(human.getHand().get(j).getColour())) {
@@ -153,18 +153,10 @@ public class Singleplayer extends Stage {
 
                         game.executeCard(human.getHand().get(finalJ), human);
                         human.playCard(human.getHand().get(finalJ),board.getPlayedCard());
-                        computer.setAvailableCards(board.getPlayedCard());
-                        game.executeCard(computer.playRandom(), computer);
-
-
-                        ;
-                        //computer.setAvailableCards(board.getPlayedCard());
-                        //try {
-                        //    Thread.sleep(600);
-                        //} catch (InterruptedException ex) {
-                        //    throw new RuntimeException(ex);
-                        //}
-                        //board.setPlayedCard(computer.playRandom());
+                        human.setAvailableCards(board.getPlayedCard(), board.getCurrentCol());
+                        computer.setAvailableCards(board.getPlayedCard(), board.getCurrentCol());
+                        if (computer.getACards().size() > 0)game.executeCard(computer.playRandom(), computer);
+                        else computer.draw(this.board.getDrawDeck());
                         drawBoard(human, computer);
 
                     });
@@ -214,14 +206,14 @@ public class Singleplayer extends Stage {
             drawDeckButton.setGraphic(deck);
 
             drawDeckButton.setOnAction(e -> {
+                human.setAvailableCards(this.board.getPlayedCard(), this.board.getCurrentCol());
                 if (human.getHand().size() < 10){
                     human.draw(board.getDrawDeck());
                     drawBoard(human, computer);
                 }
 
-
-
             });
+
             y.getChildren().add(drawDeckButton);
             StackPane.setAlignment(drawDeckButton, Pos.CENTER_LEFT);
             y.getChildren().get(y.getChildren().size()-1).setTranslateX(450);
