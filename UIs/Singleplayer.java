@@ -168,14 +168,18 @@ public class Singleplayer extends Stage {
                     y.getChildren().add(playCardButton);
 
                     StackPane.setAlignment(playCardButton, Pos.BOTTOM_LEFT);
-                    y.getChildren().get(j).setTranslateX(131*j);
+                    y.getChildren().get(j).setTranslateX(98*j);
                     y.getChildren().get(j).setTranslateY(-20);
+                    y.getChildren().get(j).setScaleX(0.75);
+                    y.getChildren().get(j).setScaleY(0.75);
 
 
                 }else{
                     y.getChildren().add(humanHand1);
                     StackPane.setAlignment(humanHand1, Pos.BOTTOM_LEFT);
-                    y.getChildren().get(j).setTranslateX(131*j);
+                    y.getChildren().get(j).setScaleX(0.75);
+                    y.getChildren().get(j).setScaleY(0.75);
+                    y.getChildren().get(j).setTranslateX(98*j);
 
                 }
 
@@ -186,7 +190,9 @@ public class Singleplayer extends Stage {
                 computerHand.setImage(new Image("card_back.png"));
                 y.getChildren().add(computerHand);
                 StackPane.setAlignment(computerHand, Pos.TOP_CENTER);
-                y.getChildren().get(i1+human.getHand().size()).setTranslateX(131*(i1)-131*3);
+                y.getChildren().get(i1+human.getHand().size()).setScaleX(0.75);
+                y.getChildren().get(i1+human.getHand().size()).setScaleY(0.75);
+                y.getChildren().get(i1+human.getHand().size()).setTranslateX(98*(i1)-98*3);
             }
 
 
@@ -212,10 +218,20 @@ public class Singleplayer extends Stage {
 
             drawDeckButton.setOnAction(e -> {
                 human.setAvailableCards(this.board.getPlayedCard(), this.board.getCurrentCol());
-                if (human.getHand().size() < 10){
+                if (human.getHand().size()==14){
+                    Stack<AbstractCard> s = new Stack<>();
+                    String colour = "wild";
+                    for (String symbol : Card.wilds) {
+                        s.push(new Card(colour, Card.wilds.get(1)));
+
+                    }
+                    human.draw(s);
+                }else if(human.getHand().size() < 14){
                     human.draw(board.getDrawDeck());
-                    drawBoard(human, computer);
+
+
                 }
+                drawBoard(human, computer);
 
             });
 
