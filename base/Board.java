@@ -280,4 +280,7 @@ public class Board {
         this.currentCol = colour;
     }
 
+    public String getCurrentCol() {
+        return this.currentCol;
+    }
 }

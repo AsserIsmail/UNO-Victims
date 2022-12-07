@@ -73,6 +73,11 @@ public class SGBKCard extends CardDecorator{
      */
     public String getSymbol(){return this.card.getSymbol();}
 
+
+    public int getPoint(){
+        return this.card.getPoint();
+    }
+
     /*
     Checks to see if a card is playable, given a previous card.
      */

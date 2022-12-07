@@ -1,7 +1,7 @@
 package base;
 
-import base.Cards.Card;
+import base.Cards.AbstractCard;
 
 public interface State {
-    public void executeCard(Card c, Player p);
+    public void executeCard(AbstractCard c, Player p);
 }

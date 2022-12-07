@@ -80,6 +80,10 @@ public class SGHCCard extends CardDecorator{
      */
     public boolean isPlayable(AbstractCard c){return this.card.isPlayable(c);}
 
+    public int getPoint(){
+        return this.card.getPoint();
+    }
+
 
     /*
     Equals method

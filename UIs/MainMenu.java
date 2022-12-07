@@ -1,8 +1,11 @@
 package UIs;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.image.Image;
@@ -87,6 +90,39 @@ public class MainMenu extends Application {
                 BackgroundSize.DEFAULT);
         Background bGround = new Background(bImg);
         base.setBackground(bGround);
+
+        Button rules = new Button();
+        Alert a = new Alert(Alert.AlertType.NONE);
+
+
+        EventHandler<ActionEvent> uno_victim_rules = new
+                EventHandler<ActionEvent>() {
+                    public void handle(ActionEvent e)
+                    {
+                        // set alert type
+                        a.setAlertType(Alert.AlertType.INFORMATION);
+                        a.setTitle("UNO VICTIM RULES");
+
+                        // set content text
+                        a.setContentText("RULES:\n" +
+                                "\n" +
+                                "This is a remix of UNO in which you are playing against the bots and your own cards. " +
+                                "Any plus 2, plus 4 will add cards to your own hand and any colour altering card allows " +
+                                "your opponent to select the colour. It's a race versus your own luck with \n" +
+                                "all the thrill of regular UNO. Are you ready to be a Victim to the game?\n");
+
+                        // show the dialog
+                        a.show();
+                    }
+                };
+        rules.setOnAction(uno_victim_rules);
+        rules.setText("Rules");
+        base.getChildren().add(rules);
+        StackPane.setAlignment(base, Pos.CENTER);
+        base.getChildren().get(3).setTranslateY(90);
+
+
+
 
         stage.setScene(scene);
         stage.show();
