@@ -75,7 +75,9 @@ public class Card implements AbstractCard{
     /*
     Getter for card's point value
      */
-    public int getPoint(){return this.point;}
+    public int getPoint(){
+        return this.point;
+    }
 
     /*
     Get the source of the back image of the card
@@ -99,7 +101,7 @@ public class Card implements AbstractCard{
     * */
     @Override
     public boolean isPlayable(AbstractCard c){
-        if (c.getColour().equals(this.colour) || this.getColour().equals("wild")||c.getColour().equals("wild")){
+        if (c.getColour().equals(this.colour) || this.getColour().equals("wild")){
             return true;
         } else return c.getSymbol().equals(this.symbol);
 

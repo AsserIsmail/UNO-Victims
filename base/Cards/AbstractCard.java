@@ -26,6 +26,8 @@ public interface AbstractCard {
      */
     public String getSymbol();
 
+    public int getPoint();
+
     /*
     Checks to see if a card is playable, given a previous card.
      */
