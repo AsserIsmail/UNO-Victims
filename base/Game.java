@@ -112,7 +112,6 @@ public class Game implements State {
             }
 
             // Change the current colour info in other classes
-            // this.board.setCurrCol(this.currColour);
             this.board.goToNextPlayer();
 
         } else if (this.currCard.getSymbol().equals("pick_four")) {
@@ -173,45 +172,6 @@ public class Game implements State {
             p.setUno();
         }
     }
-
-    /*
-    Starts the game
-     */
-//    public void startGame(){
-//        this.gameOn = true;
-//        for(Player p: this.board.getPlayers()) p.deal(board.getDrawDeck());
-//        // this.play();
-//    }
-
-    /**
-     * Play the game. Where the game actually happens
-     * */
-
-
-    /**
-     * Play the game. Where the game actually happens
-     */
-//    public void play(ChoiceBox cBots, String numBots, ChoiceBox cColour, String colour) {
-//        numBots = (String) cBots.getValue();
-//        colour = (String) cColour.getValue();
-//        new Singleplayer(colour, numBots);
-////        while (gameOn) {
-////            this.board.refill();
-////            this.board.getCurrentPlayer().setAvailableCards(this.currCard);
-////            if (this.board.getCurrentPlayer().getACards().size() == 0)
-////                this.board.getCurrentPlayer().draw(this.board.getDrawDeck());
-////            else {
-////                boolean x = false;
-////                while (!x) {
-////                    // x = this.board.getCurrentPlayer().play(will handle a mouse event here);
-////                }
-////
-////            }
-////            if (this.board.getCurrentPlayer().getScore() >= 500 || this.board.getCurrentPlayer().getHand().size() == 0)
-////                gameOn = false;
-////        }
-//
-//    }
 
     /*
     Ends the game

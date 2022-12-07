@@ -155,8 +155,13 @@ public class Singleplayer extends Stage {
                         human.playCard(human.getHand().get(finalJ),board.getPlayedCard());
                         human.setAvailableCards(board.getPlayedCard(), board.getCurrentCol());
                         computer.setAvailableCards(board.getPlayedCard(), board.getCurrentCol());
+                        System.out.println(computer.getHand());
                         if (computer.getACards().size() > 0)game.executeCard(computer.playRandom(), computer);
                         else computer.draw(this.board.getDrawDeck());
+                        if (computer.getHand().size() == 1) {
+                            Alert aUno = new Alert(Alert.AlertType.INFORMATION);
+                            aUno.setContentText("Computer called UNO!");
+                        }
                         drawBoard(human, computer);
 
                     });
@@ -231,7 +236,16 @@ public class Singleplayer extends Stage {
             callUNOkButton.setText("CALL UNO");
 
             callUNOkButton.setOnAction(e -> {
-                game.callUno(human);
+                if (human.getHand().size() == 1) {
+                    game.callUno(human);
+                    Alert a = new Alert(Alert.AlertType.INFORMATION);
+                    a.setContentText("Human called UNO!");
+                }
+                else {
+                    human.draw(board.getDrawDeck());
+                    human.draw(board.getDrawDeck());
+                    this.drawBoard(human, computer);
+                }
             });
             y.getChildren().add(callUNOkButton);
             StackPane.setAlignment(callUNOkButton, Pos.BOTTOM_RIGHT);

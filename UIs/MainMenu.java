@@ -104,12 +104,14 @@ public class MainMenu extends Application {
                         a.setTitle("UNO VICTIM RULES");
 
                         // set content text
+                        // set content text
                         a.setContentText("RULES:\n" +
                                 "\n" +
                                 "This is a remix of UNO in which you are playing against the bots and your own cards. " +
-                                "Any plus 2, plus 4 will add cards to your own hand and any colour altering card allows " +
-                                "your opponent to select the colour. It's a race versus your own luck with \n" +
-                                "all the thrill of regular UNO. Are you ready to be a Victim to the game?\n");
+                                "A new wild card had been added; Replication, play the last played card again!. \n " +
+                                "Whether it is a draw 4 or a 0, play the highest of mind games and dominate the completion. \n" +
+                                "It's a race versus your own luck with all the thrill of regular UNO. \n " +
+                                "Are you ready to be a Victim to the game?\n");
 
                         // show the dialog
                         a.show();
