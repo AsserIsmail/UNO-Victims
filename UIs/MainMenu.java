@@ -43,18 +43,11 @@ public class MainMenu extends Application {
         playButton = new Button();
         playButton.setText("Play Single player");
         playButton.setOnAction(e -> {
-            numBots = (String) cBots.getValue();
             colour = (String) cColour.getValue();
             new Singleplayer(colour, numBots);
         });
 
         //Adding the choice-box for the number of bots
-        cBots = new ChoiceBox<String>();
-        cBots.setValue("Bots");
-        cBots.getItems().add("1");
-        cBots.getItems().add("2");
-        cBots.getItems().add("3");
-
 
 
         //Adding the choice-box for the colourblind mode
@@ -72,12 +65,10 @@ public class MainMenu extends Application {
         StackPane base = new StackPane();
         base.getChildren().add(playButton);
         StackPane.setAlignment(playButton, Pos.CENTER);
-        base.getChildren().add(cBots);
-        StackPane.setAlignment(cBots, Pos.CENTER);
-        base.getChildren().get(1).setTranslateY(30);
+        base.getChildren().get(0).setTranslateY(30);
         base.getChildren().add(cColour);
         StackPane.setAlignment(cColour, Pos.CENTER);
-        base.getChildren().get(2).setTranslateY(60);
+        base.getChildren().get(1).setTranslateY(60);
 
         //Making the scene
         Scene scene = new Scene(base, 350, 350);
@@ -122,7 +113,7 @@ public class MainMenu extends Application {
         rules.setText("Rules");
         base.getChildren().add(rules);
         StackPane.setAlignment(base, Pos.CENTER);
-        base.getChildren().get(3).setTranslateY(90);
+        base.getChildren().get(2).setTranslateY(90);
 
 
 

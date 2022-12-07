@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4bb8febd-416a-4bb3-a2a3-dd30f48250b7" name="Changes" comment="Card class comments pt.1">
-      <change beforePath="$PROJECT_DIR$/UIs/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIs/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/UNO-Victims/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO-Victims/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
