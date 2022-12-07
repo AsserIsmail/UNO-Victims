@@ -1,6 +1,8 @@
 package UIs;
 
 import base.*;
+import base.Cards.AbstractCard;
+import javafx.animation.PauseTransition;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -10,10 +12,9 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.image.Image;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
-import java.awt.*;
-import java.util.Arrays;
-import java.util.concurrent.Callable;
+import java.util.Stack;
 
 
 public class Singleplayer extends Stage {
@@ -41,6 +42,7 @@ public class Singleplayer extends Stage {
         //Make the player
         this.players = getNumPlayers(bot, col);
         Human human = (Human) this.players[0];
+        Computer computer = (Computer) this.players[1];
 
 
         //Make the board
@@ -49,94 +51,15 @@ public class Singleplayer extends Stage {
         this.game = new Game(board);
 
         int i = 0;
-        while (i < 7){
-            human.draw(board.getDrawDeck());
-            i++;
-        }
+        human.deal(board.getDrawDeck());
+
+        computer.deal(board.getDrawDeck());
+
+
+        drawBoard(human, computer);
 
 
 
-
-
-
-
-
-
-        for (int j = 0; j < human.getHand().size();j++) {
-
-            ImageView humanHand1 = new ImageView();
-            humanHand1.setImage(new Image(human.getHand().get(j).getFrontSrc()));
-
-
-            if (human.getHand().get(j).isPlayable(board.getPlayedCard())) {
-                Button playCardButton = new Button();
-                playCardButton.setGraphic(humanHand1);
-                int finalJ = j;
-                playCardButton.setOnAction(e -> {
-                    //execute card;
-                });
-                y.getChildren().add(playCardButton);
-
-                StackPane.setAlignment(playCardButton, Pos.BOTTOM_LEFT);
-                y.getChildren().get(j).setTranslateX(131*j);
-                y.getChildren().get(j).setTranslateY(-20);
-
-
-            }else{
-                y.getChildren().add(humanHand1);
-                StackPane.setAlignment(humanHand1, Pos.BOTTOM_LEFT);
-                y.getChildren().get(j).setTranslateX(131*j);
-
-            }
-
-
-        }
-
-
-        for (int i1 = human.getHand().size(); i1 < 7+human.getHand().size(); i1++){ //change with computer hand size
-            ImageView computerHand = new ImageView();
-            computerHand.setImage(new Image("card_back.png"));
-            y.getChildren().add(computerHand);
-            StackPane.setAlignment(computerHand, Pos.TOP_CENTER);
-            y.getChildren().get(i1).setTranslateX(131*(i1-7)-131*3);
-
-
-        }
-        ImageView currentCard = new ImageView();
-        currentCard.setImage(new Image(board.getPlayedCard().getFrontSrc()));
-        y.getChildren().add(currentCard);
-        StackPane.setAlignment(currentCard, Pos.CENTER);
-
-
-
-
-
-
-        //Place the discard deck
-        ImageView discardDeck = new ImageView();
-        discardDeck.setImage(new Image(this.board.getPlayedCard().getFrontSrc()));
-        y.getChildren().add(discardDeck);
-        StackPane.setAlignment(discardDeck, Pos.CENTER);
-
-
-        //Make the back of the deck
-        ImageView deck = new ImageView();
-        deck.setImage(new Image("./Card variations/Normal/card_back.png"));
-        Button drawDeckButton = new Button();
-        drawDeckButton.setGraphic(deck);
-
-        drawDeckButton.setOnAction(e -> {
-            //execute card;
-        });
-        y.getChildren().add(drawDeckButton);
-        StackPane.setAlignment(drawDeckButton, Pos.BOTTOM_RIGHT);
-
-        //Show the score
-        Label score = new Label();
-        score.setText("Score: " + String.valueOf(this.board.getPlayer(0).getScore()));
-        score.setFont(new Font(32));
-        y.getChildren().add(score);
-        StackPane.setAlignment(score, Pos.TOP_LEFT);
 
         //Show everything
         this.setTitle("Single player");
@@ -153,10 +76,12 @@ public class Singleplayer extends Stage {
         Player[] res = new Player[Integer.parseInt(bots) + 1];
 
         res[0] = new Human("p1", col);
+        //res[1] = new Computer("c1");
 
-        for (int i = 1; i < Integer.parseInt(bots); i++){
-            res[i] = new Computer("C" + i);
+        for (int i = 1; i < Integer.parseInt(bots) + 1; i++){
+           res[i] = new Computer(("C" + String.valueOf(i)));
         }
+
 
         return res;
     }
@@ -171,6 +96,106 @@ public class Singleplayer extends Stage {
         else if (mode.equals("Normal Signed")) return "SG";
         else if (mode.equals("Black and White Signed")) return "SG-BK";
         else return "";
+    }
+
+
+
+    private void drawBoard(Human human, Computer computer){
+
+        y.getChildren().clear();
+
+        for (int j = 0; j < human.getHand().size();j++) {
+
+            ImageView humanHand1 = new ImageView();
+            humanHand1.setImage(new Image(human.getHand().get(j).getFrontSrc()));
+
+
+            if (human.getHand().get(j).isPlayable(board.getPlayedCard())) {
+                Button playCardButton = new Button();
+                playCardButton.setGraphic(humanHand1);
+                 //in order to reference the index value later
+                int finalJ = j;
+                playCardButton.setOnAction(e -> {
+                    int index = finalJ;
+
+                    board.setPlayedCard(human.playCard(human.getHand().get(finalJ), board.getPlayedCard()));
+                    computer.setAvailableCards(board.getPlayedCard());
+                    try {
+                        Thread.sleep(600);
+                    } catch (InterruptedException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    board.setPlayedCard(computer.playRandom());
+                    drawBoard(human, computer);
+
+                });
+                y.getChildren().add(playCardButton);
+
+                StackPane.setAlignment(playCardButton, Pos.BOTTOM_CENTER);
+                y.getChildren().get(j).setTranslateX(131*j-131*3);
+                y.getChildren().get(j).setTranslateY(-20);
+
+
+            }else{
+                y.getChildren().add(humanHand1);
+                StackPane.setAlignment(humanHand1, Pos.BOTTOM_CENTER);
+                y.getChildren().get(j).setTranslateX(131*j-131*3);
+
+            }
+
+
+        }
+        for (int i1 = 0; i1 < computer.getHand().size(); i1++){ //change with computer hand size
+            ImageView computerHand = new ImageView();
+            computerHand.setImage(new Image("card_back.png"));
+            y.getChildren().add(computerHand);
+            StackPane.setAlignment(computerHand, Pos.TOP_CENTER);
+            y.getChildren().get(i1+human.getHand().size()).setTranslateX(131*(i1)-131*3);
+        }
+
+
+
+
+        ImageView currentCard = new ImageView();
+        currentCard.setImage(new Image(board.getPlayedCard().getFrontSrc()));
+        y.getChildren().add(currentCard);
+        StackPane.setAlignment(currentCard, Pos.CENTER);
+
+        //Place the discard deck
+        ImageView discardDeck = new ImageView();
+        discardDeck.setImage(new Image(this.board.getPlayedCard().getFrontSrc()));
+        y.getChildren().add(discardDeck);
+        StackPane.setAlignment(discardDeck, Pos.CENTER);
+
+
+        //Make the back of the deck
+        ImageView deck = new ImageView();
+        deck.setImage(new Image("./Card variations/Normal/card_back.png"));
+        Button drawDeckButton = new Button();
+        drawDeckButton.setGraphic(deck);
+
+        drawDeckButton.setOnAction(e -> {
+            if (human.getHand().size() < 10){
+                human.draw(board.getDrawDeck());
+                drawBoard(human, computer);
+            }
+
+
+
+        });
+        y.getChildren().add(drawDeckButton);
+        StackPane.setAlignment(drawDeckButton, Pos.BOTTOM_RIGHT);
+
+        //Show the score
+        Label score = new Label();
+        score.setText("Score: " + String.valueOf(this.board.getPlayer(0).getScore()));
+        score.setFont(new Font(32));
+        y.getChildren().add(score);
+        StackPane.setAlignment(score, Pos.TOP_LEFT);
+
+
+
+
     }
 
 }
