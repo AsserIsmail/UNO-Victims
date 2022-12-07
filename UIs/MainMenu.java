@@ -108,9 +108,10 @@ public class MainMenu extends Application {
                         a.setContentText("RULES:\n" +
                                 "\n" +
                                 "This is a remix of UNO in which you are playing against the bots and your own cards. " +
-                                "A new wild card had been added; Replication, play the last played card again!. \n " +
+                                "A new wild card had been added; Replication, play the last played card again!. \n" +
                                 "Whether it is a draw 4 or a 0, play the highest of mind games and dominate the completion. \n" +
-                                "It's a race versus your own luck with all the thrill of regular UNO. \n " +
+                                "It's a race versus your own luck with all the thrill of regular UNO. \n" +
+                                "You can win either by playing all your cards, or getting your score to 500. \n" +
                                 "Are you ready to be a Victim to the game?\n");
 
                         // show the dialog
