@@ -91,9 +91,10 @@ public class Singleplayer extends Stage {
     private Player[] getNumPlayers(String bots, String col){
 
         Player[] res = new Player[2];
-
-        res[0] = new Human("P1", col);
-        res[1] = new Computer("C1");
+        Human h = Human.getH();
+        Computer c = Computer.getC();
+        res[0] = h;
+        res[1] = c;
 
         return res;
     }
@@ -113,7 +114,8 @@ public class Singleplayer extends Stage {
 
 
     private void drawBoard(Human human, Computer computer){
-        if (human.getHand().size() == 0 || computer.getHand().size() == 0 || human.getScore() >= 500 ){
+        if (human.getHand().size() == 0 || computer.getHand().size() == 0 || human.getScore() >= 2000
+        ){
             game.endGame();
 
             if (human.getHand().size() == 0 || human.getScore() >= 500){
@@ -227,6 +229,18 @@ public class Singleplayer extends Stage {
 
                 }
                 drawBoard(human, computer);
+                computer.setAvailableCards(board.getPlayedCard(), board.getCurrentCol());
+
+                if (computer.getACards().size() > 0)game.executeCard(computer.playRandom(), computer);
+                else computer.draw(this.board.getDrawDeck());
+                drawBoard(human, computer);
+                if (computer.getHand().size() == 1) {
+                    Alert aUno = new Alert(Alert.AlertType.INFORMATION);
+                    aUno.setContentText("Computer called UNO!");
+                    aUno.show();
+                }
+
+
 
             });
 
@@ -251,6 +265,7 @@ public class Singleplayer extends Stage {
                     game.callUno(human);
                     Alert a = new Alert(Alert.AlertType.INFORMATION);
                     a.setContentText("Human called UNO!");
+                    a.show();
                 }
                 else {
                     human.draw(board.getDrawDeck());

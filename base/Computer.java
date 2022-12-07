@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class Computer extends Player{
     /**
-     * Constructor for a new Uno Player with their entered name and form of colourblindness
+     * Constructor for a new Uno Bot
      *
      * @param playerName name
      */
