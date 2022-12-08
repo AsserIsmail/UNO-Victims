@@ -1,119 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bb8febd-416a-4bb3-a2a3-dd30f48250b7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/blue_0_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/blue_1_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/blue_2_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/blue_3_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/blue_4_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/blue_5_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/blue_6_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/blue_7_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/blue_8_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/blue_9_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/blue_picker_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/blue_reverse_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/blue_skip_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/card_back_alt_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/card_back_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/green_0_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/green_1_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/green_2_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/green_3_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/green_4_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/green_5_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/green_6_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/green_7_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/green_8_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/green_9_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/green_picker_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/green_reverse_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/green_skip_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/red_0_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/red_1_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/red_2_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/red_3_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/red_4_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/red_5_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/red_6_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/red_7_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/red_8_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/red_9_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/red_picker_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/red_reverse_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/red_skip_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/wild_colora_changer_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/wild_pick_four_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/yellow_0_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/yellow_1_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/yellow_2_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/yellow_3_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/yellow_4_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/yellow_5_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/yellow_6_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/yellow_7_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/yellow_8_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/yellow_9_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/yellow_picker_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/yellow_reverse_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/large/yellow_skip_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/blue_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/blue_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/blue_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/blue_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/blue_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/blue_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/blue_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/blue_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/blue_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/blue_9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/blue_picker.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/blue_reverse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/blue_skip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/card_back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/card_back_alt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/green_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/green_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/green_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/green_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/green_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/green_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/green_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/green_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/green_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/green_9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/green_picker.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/green_reverse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/green_skip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/red_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/red_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/red_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/red_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/red_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/red_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/red_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/red_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/red_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/red_9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/red_picker.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/red_reverse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/red_skip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/wild_color_changer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/wild_pick_four.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/yellow_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/yellow_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/yellow_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/yellow_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/yellow_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/yellow_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/yellow_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/yellow_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/yellow_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/yellow_9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/yellow_picker.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/yellow_reverse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uno_assets_2d/PNGs/small/yellow_skip.png" afterDir="false" />
+    <list default="true" id="4bb8febd-416a-4bb3-a2a3-dd30f48250b7" name="Changes" comment="Card class comments pt.1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Card variations/SG-BK/green_0 copy_SG-BK.png" beforeDir="false" afterPath="$PROJECT_DIR$/Card variations/SG-BK/green_0_SG-BK.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Card variations/SG-BK/red_0 copy_SG-BK.png" beforeDir="false" afterPath="$PROJECT_DIR$/Card variations/SG-BK/red_0_SG-BK.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Card variations/SG-BK/yellow_0 copy_SG-BK.png" beforeDir="false" afterPath="$PROJECT_DIR$/Card variations/SG-BK/yellow_0_SG-BK.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Card variations/SG-HC/green_0 copy_SG-HC.png" beforeDir="false" afterPath="$PROJECT_DIR$/Card variations/SG-HC/green_0_SG-HC.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Card variations/SG-HC/red_0 copy_SG-HC.png" beforeDir="false" afterPath="$PROJECT_DIR$/Card variations/SG-HC/red_0_SG-HC.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Card variations/SG-HC/yellow_0 copy_SG-HC.png" beforeDir="false" afterPath="$PROJECT_DIR$/Card variations/SG-HC/yellow_0_SG-HC.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Card variations/SG/green_0 copy_SG.png" beforeDir="false" afterPath="$PROJECT_DIR$/Card variations/SG/green_0_SG.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Card variations/SG/red_0 copy_SG.png" beforeDir="false" afterPath="$PROJECT_DIR$/Card variations/SG/red_0_SG.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Card variations/SG/yellow_0 copy_SG.png" beforeDir="false" afterPath="$PROJECT_DIR$/Card variations/SG/yellow_0_SG.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIs/Singleplayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIs/Singleplayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO-Victims/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO-Victims/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO-Victims/UIs/Singleplayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO-Victims/UIs/Singleplayer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,10 +33,21 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev-uno" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/UIs/Singleplayer.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2Ggr5P2Pfg70uaJrFlwdnwQWY0x" />
   <component name="ProjectLevelVcsManager">
@@ -145,14 +61,134 @@
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/maziarmehrafza/Desktop/UNO-Victims&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.MainMenu">
+    <configuration name="MainMenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UIs.MainMenu" />
+      <module name="UNO-Victims" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;/Library/JavaFX/lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UIs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UNO" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UNO" />
+      <module name="UNO-Victims" />
+      <option name="PROGRAM_PARAMETERS" value="--module-path &quot;/Library/JavaFX/lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UNO-Victims" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.CardTests" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardTests.CardEqualsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UNO-Victims" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.CardTests" />
+      <option name="METHOD_NAME" value="CardEqualsTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardTests.CardImageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UNO-Victims" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.CardTests" />
+      <option name="METHOD_NAME" value="CardImageTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardTests.CardIsPlayable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UNO-Victims" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.CardTests" />
+      <option name="METHOD_NAME" value="CardIsPlayable" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.UNO" />
+      <item itemvalue="Application.MainMenu" />
+      <item itemvalue="JUnit.CardTests" />
+      <item itemvalue="JUnit.CardTests.CardEqualsTest" />
+      <item itemvalue="JUnit.CardTests.CardImageTest" />
+      <item itemvalue="JUnit.CardTests.CardIsPlayable" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainMenu" />
+        <item itemvalue="JUnit.CardTests.CardIsPlayable" />
+        <item itemvalue="JUnit.CardTests.CardImageTest" />
+        <item itemvalue="JUnit.CardTests.CardEqualsTest" />
+        <item itemvalue="JUnit.CardTests" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -162,6 +198,14 @@
       <option name="presentableId" value="Default" />
       <updated>1666820883421</updated>
     </task>
+    <task id="LOCAL-00001" summary="Card class outline">
+      <created>1669574426251</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669574426251</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -169,7 +213,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/dev-uno-UI" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -177,5 +233,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Card class outline" />
+    <option name="LAST_COMMIT_MESSAGE" value="Card class outline" />
   </component>
 </project>
