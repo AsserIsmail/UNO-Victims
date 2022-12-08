@@ -4,6 +4,7 @@ import base.Cards.AbstractCard;
 import base.Cards.Card;
 
 public class Human extends Player{
+    private static Human h;
     private String colourBlind; // the form of colourblindness that this player has
 
     private boolean isReady = false; // represents if the player has the readied up status in the lobby
@@ -14,9 +15,16 @@ public class Human extends Player{
      * @param playerName name
      * @param cB         colourBlind
      */
-    public Human(String playerName, String cB) {
+    private Human(String playerName, String cB) {
         super(playerName);
         this.colourBlind = cB;
+    }
+
+    public static Human getH(){
+        if(h==null){
+            h = new Human("p1", "");
+        }
+        return h;
     }
     /**
      * returns the form of cb the player has selected
