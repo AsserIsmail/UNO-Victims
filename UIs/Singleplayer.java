@@ -118,10 +118,16 @@ public class Singleplayer extends Stage {
         ){
             game.endGame();
 
-            if (human.getHand().size() == 0 || human.getScore() >= 500){
+            if (human.getHand().size() == 0 || human.getScore() >= 2000){
                 System.out.println("Congratulations You Won!");
+                Alert won = new Alert(Alert.AlertType.INFORMATION);
+                won.setContentText("Congratulations You Won!");
+                won.show();
             }else{
                 System.out.println("Unfortunately The Computer Won :(");
+                Alert won = new Alert(Alert.AlertType.INFORMATION);
+                won.setContentText("Unfortunately The Computer Won :(");
+                won.show();
             }
             try {
                 Thread.sleep(500);
@@ -136,6 +142,7 @@ public class Singleplayer extends Stage {
             for (int j = 0; j < human.getHand().size();j++) {
 
                 ImageView humanHand1 = new ImageView();
+                System.out.println(human.getHand().get(j).getFrontSrc());
                 humanHand1.setImage(new Image(human.getHand().get(j).getFrontSrc()));
 
 
@@ -152,12 +159,12 @@ public class Singleplayer extends Stage {
                         human.playCard(human.getHand().get(finalJ),board.getPlayedCard());
                         human.setAvailableCards(board.getPlayedCard(), board.getCurrentCol());
                         computer.setAvailableCards(board.getPlayedCard(), board.getCurrentCol());
-                        System.out.println(computer.getHand());
                         if (computer.getACards().size() > 0)game.executeCard(computer.playRandom(), computer);
                         else computer.draw(this.board.getDrawDeck());
                         if (computer.getHand().size() == 1) {
                             Alert aUno = new Alert(Alert.AlertType.INFORMATION);
                             aUno.setContentText("Computer called UNO!");
+                            aUno.show();
                         }
                         drawBoard(human, computer);
 

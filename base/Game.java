@@ -45,8 +45,6 @@ public class Game implements State {
     @Override
     public void executeCard(AbstractCard c, Player p) {
 
-        // System.out.println("Bots hand: " + p.getHand());
-
         System.out.println(p.getName() + " played " + c.getFrontSrc());
 
         board.setCurrCol(c.getColour());
